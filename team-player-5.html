@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Necromancers</title>
+    <link rel="shortcut icon" type="image/x-icon" href="">
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+  </head>
+  <body>
+    <div class="loading" id="loading">
+      <div class="icon-loading">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="circle"></div>
+      </div>
+    </div>
+    <nav class="nav flex items-center">
+      <div class="nav-logo"><img src="./assets/images/logo.png" alt=""></div>
+      <div class="nav-lists flex items-center">
+        <div class="nav-list nav-level-1 flex items-center"><a href="home.html">home</a>
+        </div>
+        <div class="nav-list nav-level-1 flex items-center"><a href="#">teams</a>
+          <div class="list-plus icon-plus"><span></span><span></span></div>
+          <div class="nav-list-child">
+            <div class="nav-list flex items-center"><a href="team-section.html">team selections</a></div>
+            <div class="nav-list flex items-center"><a href="team-overview.html">team overview</a></div>
+            <div class="nav-list flex items-center"><a href="team-player-3.html">player page</a></div>
+          </div>
+        </div>
+        <div class="nav-list nav-level-1 flex items-center"><a href="#">matches</a>
+          <div class="list-plus icon-plus"><span></span><span></span></div>
+          <div class="nav-list-child">
+            <div class="nav-list flex items-center"><a href="match-score.html">match scores</a></div>
+            <div class="nav-list flex items-center"><a href="match-upcoming.html">upcoming matches</a></div>
+            <div class="nav-list flex items-center"><a href="#">standings</a></div>
+            <div class="nav-list flex items-center"><a href="#">match stats</a></div>
+            <div class="nav-list flex items-center"><a href="#">match lineups</a></div>
+            <div class="nav-list flex items-center"><a href="#">match overviews</a></div>
+            <div class="nav-list flex items-center"><a href="#">match replay</a></div>
+          </div>
+        </div>
+        <div class="nav-list nav-level-1 flex items-center"><a href="#">news</a>
+          <div class="list-plus icon-plus"><span></span><span></span></div>
+          <div class="nav-list-child">
+            <div class="nav-list flex items-center"><a href="news.html">news page</a></div>
+            <div class="nav-list flex items-center"><a href="blog-post.html">post page</a></div>
+          </div>
+        </div>
+        <div class="nav-list nav-level-1 flex items-center"><a href="#">features</a>
+        </div>
+        <div class="nav-list nav-level-1 flex items-center"><a href="#">shop</a>
+          <div class="list-plus icon-plus"><span></span><span></span></div>
+          <div class="nav-list-child">
+            <div class="nav-list flex items-center"><a href="shop.html">shop page</a></div>
+            <div class="nav-list flex items-center"><a href="#">product page</a></div>
+            <div class="nav-list flex items-center"><a href="#">checkout page</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center" style="position: relative; margin-left: auto;">   
+        <div class="nav-profile flex items-center">
+          <div class="avatar"><img src="./assets/images/avatar.jpg" alt=""></div>
+          <div class="profile-info">
+            <p class="des">Hello</p>
+            <h6 class="name">James Spiegel</h6>
+          </div>
+          <div class="account-setting"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve"><path d="M238.933,0C106.974,0,0,106.974,0,238.933s106.974,238.933,238.933,238.933s238.933-106.974,238.933-238.933 C477.726,107.033,370.834,0.141,238.933,0z M238.933,443.733c-113.108,0-204.8-91.692-204.8-204.8s91.692-204.8,204.8-204.8 s204.8,91.692,204.8,204.8C443.611,351.991,351.991,443.611,238.933,443.733z"/><circle cx="153.6" cy="204.8" r="34.133"/><circle cx="324.267" cy="204.8" r="34.133"/><path d="M304.287,296.61c-5.637-7.554-16.331-9.108-23.885-3.47c-0.327,0.244-0.644,0.499-0.953,0.766h0 c-24.135,17.628-56.898,17.628-81.033,0c-7.131-6.164-17.909-5.379-24.072,1.752c-6.164,7.131-5.379,17.909,1.752,24.072 c0.308,0.267,0.626,0.522,0.953,0.766c36.531,27.922,87.236,27.922,123.767,0C308.371,314.858,309.925,304.164,304.287,296.61z"/></svg></div>
+          <div class="log-out"><svg height="490pt" viewBox="0 -10 490.66667 490" width="490pt" xmlns="http://www.w3.org/2000/svg"><path d="m474.667969 251h-309.335938c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h309.335938c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/><path d="m250.667969 336.332031c-4.097657 0-8.191407-1.554687-11.308594-4.691406l-85.332031-85.332031c-6.25-6.253906-6.25-16.386719 0-22.636719l85.332031-85.332031c6.25-6.25 16.382813-6.25 22.636719 0 6.25 6.25 6.25 16.382812 0 22.632812l-74.027344 74.027344 74.027344 74.027344c6.25 6.25 6.25 16.382812 0 22.632812-3.136719 3.117188-7.234375 4.671875-11.328125 4.671875zm0 0"/><path d="m234.667969 469.667969c-129.386719 0-234.667969-105.28125-234.667969-234.667969s105.28125-234.667969 234.667969-234.667969c97.085937 0 182.804687 58.410157 218.410156 148.824219 3.242187 8.210938-.8125 17.492188-9.023437 20.753906-8.214844 3.203125-17.496094-.789062-20.757813-9.042968-30.742187-78.082032-104.789063-128.535157-188.628906-128.535157-111.746094 0-202.667969 90.925781-202.667969 202.667969s90.921875 202.667969 202.667969 202.667969c83.839843 0 157.886719-50.453125 188.628906-128.511719 3.242187-8.257812 12.523437-12.246094 20.757813-9.046875 8.210937 3.242187 12.265624 12.542969 9.023437 20.757813-35.605469 90.390624-121.324219 148.800781-218.410156 148.800781zm0 0"/></svg></div>
+        </div>
+        <div class="nav-pagination flex items-center">
+          <div class="pagination-item left"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+<path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"/>
+</svg>
+          </div>
+          <div class="pagination-item">01</div>
+          <div class="pagination-item">02</div>
+          <div class="pagination-item">...</div>
+          <div class="pagination-item">08</div>
+          <div class="pagination-item right"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve">
+<path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"/>
+</svg>
+          </div>
+        </div>
+        <div class="nav-action-group">
+          <div class="action-group flex items-center">
+            <div class="action-item like">
+              <div class="sub-action">
+                <div class="icon-plus"><span></span><span></span></div>
+              </div><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 478.2 478.2" style="enable-background:new 0 0 478.2 478.2;" xml:space="preserve"><path d="M457.575,325.1c9.8-12.5,14.5-25.9,13.9-39.7c-0.6-15.2-7.4-27.1-13-34.4c6.5-16.2,9-41.7-12.7-61.5 c-15.9-14.5-42.9-21-80.3-19.2c-26.3,1.2-48.3,6.1-49.2,6.3h-0.1c-5,0.9-10.3,2-15.7,3.2c-0.4-6.4,0.7-22.3,12.5-58.1 c14-42.6,13.2-75.2-2.6-97c-16.6-22.9-43.1-24.7-50.9-24.7c-7.5,0-14.4,3.1-19.3,8.8c-11.1,12.9-9.8,36.7-8.4,47.7 c-13.2,35.4-50.2,122.2-81.5,146.3c-0.6,0.4-1.1,0.9-1.6,1.4c-9.2,9.7-15.4,20.2-19.6,29.4c-5.9-3.2-12.6-5-19.8-5h-61 c-23,0-41.6,18.7-41.6,41.6v162.5c0,23,18.7,41.6,41.6,41.6h61c8.9,0,17.2-2.8,24-7.6l23.5,2.8c3.6,0.5,67.6,8.6,133.3,7.3 c11.9,0.9,23.1,1.4,33.5,1.4c17.9,0,33.5-1.4,46.5-4.2c30.6-6.5,51.5-19.5,62.1-38.6c8.1-14.6,8.1-29.1,6.8-38.3 c19.9-18,23.4-37.9,22.7-51.9C461.275,337.1,459.475,330.2,457.575,325.1z M48.275,447.3c-8.1,0-14.6-6.6-14.6-14.6V270.1 c0-8.1,6.6-14.6,14.6-14.6h61c8.1,0,14.6,6.6,14.6,14.6v162.5c0,8.1-6.6,14.6-14.6,14.6h-61V447.3z M431.975,313.4 c-4.2,4.4-5,11.1-1.8,16.3c0,0.1,4.1,7.1,4.6,16.7c0.7,13.1-5.6,24.7-18.8,34.6c-4.7,3.6-6.6,9.8-4.6,15.4c0,0.1,4.3,13.3-2.7,25.8 c-6.7,12-21.6,20.6-44.2,25.4c-18.1,3.9-42.7,4.6-72.9,2.2c-0.4,0-0.9,0-1.4,0c-64.3,1.4-129.3-7-130-7.1h-0.1l-10.1-1.2 c0.6-2.8,0.9-5.8,0.9-8.8V270.1c0-4.3-0.7-8.5-1.9-12.4c1.8-6.7,6.8-21.6,18.6-34.3c44.9-35.6,88.8-155.7,90.7-160.9 c0.8-2.1,1-4.4,0.6-6.7c-1.7-11.2-1.1-24.9,1.3-29c5.3,0.1,19.6,1.6,28.2,13.5c10.2,14.1,9.8,39.3-1.2,72.7 c-16.8,50.9-18.2,77.7-4.9,89.5c6.6,5.9,15.4,6.2,21.8,3.9c6.1-1.4,11.9-2.6,17.4-3.5c0.4-0.1,0.9-0.2,1.3-0.3 c30.7-6.7,85.7-10.8,104.8,6.6c16.2,14.8,4.7,34.4,3.4,36.5c-3.7,5.6-2.6,12.9,2.4,17.4c0.1,0.1,10.6,10,11.1,23.3 C444.875,295.3,440.675,304.4,431.975,313.4z"/></svg>
+            </div>
+            <div class="action-item cart">
+              <div class="sub-action cart-number">4</div><svg height="512pt" viewBox="-35 0 512 512.00102" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m443.054688 495.171875-38.914063-370.574219c-.816406-7.757812-7.355469-13.648437-15.15625-13.648437h-73.140625v-16.675781c0-51.980469-42.292969-94.273438-94.273438-94.273438-51.984374 0-94.277343 42.292969-94.277343 94.273438v16.675781h-73.140625c-7.800782 0-14.339844 5.890625-15.15625 13.648437l-38.9140628 370.574219c-.4492192 4.292969.9453128 8.578125 3.8320308 11.789063 2.890626 3.207031 7.007813 5.039062 11.324219 5.039062h412.65625c4.320313 0 8.4375-1.832031 11.324219-5.039062 2.894531-3.210938 4.285156-7.496094 3.835938-11.789063zm-285.285157-400.898437c0-35.175782 28.621094-63.796876 63.800781-63.796876 35.175782 0 63.796876 28.621094 63.796876 63.796876v16.675781h-127.597657zm-125.609375 387.25 35.714844-340.097657h59.417969v33.582031c0 8.414063 6.824219 15.238282 15.238281 15.238282s15.238281-6.824219 15.238281-15.238282v-33.582031h127.597657v33.582031c0 8.414063 6.824218 15.238282 15.238281 15.238282 8.414062 0 15.238281-6.824219 15.238281-15.238282v-33.582031h59.417969l35.714843 340.097657zm0 0"/></svg>
+            </div>
+            <div class="action-item search"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path d="M225.474,0C101.151,0,0,101.151,0,225.474c0,124.33,101.151,225.474,225.474,225.474 c124.33,0,225.474-101.144,225.474-225.474C450.948,101.151,349.804,0,225.474,0z M225.474,409.323 c-101.373,0-183.848-82.475-183.848-183.848S124.101,41.626,225.474,41.626s183.848,82.475,183.848,183.848 S326.847,409.323,225.474,409.323z"/><path d="M505.902,476.472L386.574,357.144c-8.131-8.131-21.299-8.131-29.43,0c-8.131,8.124-8.131,21.306,0,29.43l119.328,119.328 c4.065,4.065,9.387,6.098,14.715,6.098c5.321,0,10.649-2.033,14.715-6.098C514.033,497.778,514.033,484.596,505.902,476.472z"/></svg></div>
+          </div>
+        </div>
+        <div class="nav-open-menu"><span></span><span></span><span></span></div>
+      </div>
+    </nav>
+    <nav class="nav-mobile">
+      <div class="nav-header flex">
+        <div class="header-info flex">
+          <div class="info-wrap">
+            <p>Competitions</p>
+            <h6 class="flex items-center justify-between">All competitions
+              <div class="icon-plus"><span></span><span></span></div>
+            </h6>
+          </div>
+        </div>
+        <div class="header-match">     
+          <div class="owl-carousel owl-theme match-carousel">
+            <div class="item">
+              <div class="match-item flex flex-col justify-center">
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-1.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">NCR</h3>
+                      <h4 class="country">USA</h4>
+                    </div>
+                  </div>
+                  <div class="score">2<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 292.4 292.4" style="enable-background:new 0 0 292.4 292.4;" xml:space="preserve"><path d="M69.4,159l127.9,127.9c3.6,3.6,7.9,5.4,12.8,5.4c5,0,9.2-1.8,12.9-5.4c3.6-3.6,5.4-7.9,5.4-12.8V18.3 c0-4.9-1.8-9.2-5.4-12.8c-3.6-3.6-7.9-5.4-12.9-5.4c-4.9,0-9.2,1.8-12.8,5.4L69.4,133.3c-3.6,3.6-5.4,7.9-5.4,12.8 C64,151.1,65.8,155.4,69.4,159z"/></svg>
+                  </div>
+                  <div class="info">25:42<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"/></svg>
+                  </div>
+                </div>
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-2.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">RRH</h3>
+                      <h4 class="country">JPN</h4>
+                    </div>
+                  </div>
+                  <div class="score">1
+                  </div>
+                  <div class="info">01/12</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="match-item flex flex-col justify-center">
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-3.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">FEG</h3>
+                      <h4 class="country">FRA</h4>
+                    </div>
+                  </div>
+                  <div class="score">4<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 292.4 292.4" style="enable-background:new 0 0 292.4 292.4;" xml:space="preserve"><path d="M69.4,159l127.9,127.9c3.6,3.6,7.9,5.4,12.8,5.4c5,0,9.2-1.8,12.9-5.4c3.6-3.6,5.4-7.9,5.4-12.8V18.3 c0-4.9-1.8-9.2-5.4-12.8c-3.6-3.6-7.9-5.4-12.9-5.4c-4.9,0-9.2,1.8-12.8,5.4L69.4,133.3c-3.6,3.6-5.4,7.9-5.4,12.8 C64,151.1,65.8,155.4,69.4,159z"/></svg>
+                  </div>
+                  <div class="info">Final
+                  </div>
+                </div>
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-4.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">NCR</h3>
+                      <h4 class="country">USA</h4>
+                    </div>
+                  </div>
+                  <div class="score">3
+                  </div>
+                  <div class="info">01/09</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="match-item flex flex-col justify-center">
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-5.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">NCR</h3>
+                      <h4 class="country">USA</h4>
+                    </div>
+                  </div>
+                  <div class="score">1
+                  </div>
+                  <div class="info">Final
+                  </div>
+                </div>
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-1.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">AGB</h3>
+                      <h4 class="country">SPA</h4>
+                    </div>
+                  </div>
+                  <div class="score">3<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 292.4 292.4" style="enable-background:new 0 0 292.4 292.4;" xml:space="preserve"><path d="M69.4,159l127.9,127.9c3.6,3.6,7.9,5.4,12.8,5.4c5,0,9.2-1.8,12.9-5.4c3.6-3.6,5.4-7.9,5.4-12.8V18.3 c0-4.9-1.8-9.2-5.4-12.8c-3.6-3.6-7.9-5.4-12.9-5.4c-4.9,0-9.2,1.8-12.8,5.4L69.4,133.3c-3.6,3.6-5.4,7.9-5.4,12.8 C64,151.1,65.8,155.4,69.4,159z"/></svg>
+                  </div>
+                  <div class="info">01/05</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="match-item flex flex-col justify-center">
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-2.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">ICP</h3>
+                      <h4 class="country">USA</h4>
+                    </div>
+                  </div>
+                  <div class="score">0
+                  </div>
+                  <div class="info">Final
+                  </div>
+                </div>
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-3.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">NCR</h3>
+                      <h4 class="country">USA</h4>
+                    </div>
+                  </div>
+                  <div class="score">5<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 292.4 292.4" style="enable-background:new 0 0 292.4 292.4;" xml:space="preserve"><path d="M69.4,159l127.9,127.9c3.6,3.6,7.9,5.4,12.8,5.4c5,0,9.2-1.8,12.9-5.4c3.6-3.6,5.4-7.9,5.4-12.8V18.3 c0-4.9-1.8-9.2-5.4-12.8c-3.6-3.6-7.9-5.4-12.9-5.4c-4.9,0-9.2,1.8-12.8,5.4L69.4,133.3c-3.6,3.6-5.4,7.9-5.4,12.8 C64,151.1,65.8,155.4,69.4,159z"/></svg>
+                  </div>
+                  <div class="info">01/02</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-body flex">
+        <div class="nav-lists flex flex-col items-start">
+          <div class="nav-list flex items-center nav-level-1"><a href="home.html">home</a>
+          </div>
+          <div class="nav-list flex items-center nav-level-1"><a href="#">teams</a>
+            <div class="list-plus icon-plus"><span></span><span></span></div>
+            <div class="nav-list-child">
+              <div class="nav-list flex items-center back">
+                <div class="flex items-center"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve"><path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"/></svg><a href="#">Back</a></div>
+              </div>
+              <div class="nav-list flex items-center"><a href="team-section.html">team selections</a></div>
+              <div class="nav-list flex items-center"><a href="team-overview.html">team overview</a></div>
+              <div class="nav-list flex items-center"><a href="team-player-3.html">player page</a></div>
+            </div>
+          </div>
+          <div class="nav-list flex items-center nav-level-1"><a href="#">matches</a>
+            <div class="list-plus icon-plus"><span></span><span></span></div>
+            <div class="nav-list-child">
+              <div class="nav-list flex items-center back">
+                <div class="flex items-center"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve"><path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"/></svg><a href="#">Back</a></div>
+              </div>
+              <div class="nav-list flex items-center"><a href="match-score.html">match scores</a></div>
+              <div class="nav-list flex items-center"><a href="match-upcoming.html">upcoming matches</a></div>
+              <div class="nav-list flex items-center"><a href="#">standings</a></div>
+              <div class="nav-list flex items-center"><a href="#">match stats</a></div>
+              <div class="nav-list flex items-center"><a href="#">match lineups</a></div>
+              <div class="nav-list flex items-center"><a href="#">match overviews</a></div>
+              <div class="nav-list flex items-center"><a href="#">match replay</a></div>
+            </div>
+          </div>
+          <div class="nav-list flex items-center nav-level-1"><a href="#">news</a>
+            <div class="list-plus icon-plus"><span></span><span></span></div>
+            <div class="nav-list-child">
+              <div class="nav-list flex items-center back">
+                <div class="flex items-center"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve"><path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"/></svg><a href="#">Back</a></div>
+              </div>
+              <div class="nav-list flex items-center"><a href="news.html">news page</a></div>
+              <div class="nav-list flex items-center"><a href="blog-post.html">post page</a></div>
+            </div>
+          </div>
+          <div class="nav-list flex items-center nav-level-1"><a href="#">features</a>
+          </div>
+          <div class="nav-list flex items-center nav-level-1"><a href="#">shop</a>
+            <div class="list-plus icon-plus"><span></span><span></span></div>
+            <div class="nav-list-child">
+              <div class="nav-list flex items-center back">
+                <div class="flex items-center"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve"><path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"/></svg><a href="#">Back</a></div>
+              </div>
+              <div class="nav-list flex items-center"><a href="shop.html">shop page</a></div>
+              <div class="nav-list flex items-center"><a href="#">product page</a></div>
+              <div class="nav-list flex items-center"><a href="#">checkout page</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-info">
+          <div class="info-team flex justify-between">
+            <div class="info-team-item">
+              <h5 class="title">Join our team</h5>
+              <p>We’re always looking for new talent to join our teams. If you wanna join us, just send us and email and we’ll get back to you!</p><span>Max Parker - Recruiter</span><a href="#">mp-recruit<span class="acid-green-color">@</span>necromancers.com</a><span>Be our partner!</span><a href="#">partners<span class="acid-green-color">@</span>necromancers.com</a>
+            </div>
+            <div class="info-team-item">
+              <h5 class="title">Contact</h5>
+              <p>If you have any questions, just send us and email and don’t forget to follow and like all our social accounts to keep updated!</p><span>General inquiries</span><a href="#">inquiries<span class="acid-green-color">@</span>necromancers.com</a>
+            </div>
+          </div>
+          <div class="info-partner">
+            <h5 class="title">Our partners</h5>
+            <div class="owl-carousel owl-theme partner-carousel">
+              <div class="item partner-item"><img src="./assets/images/partner-1.png" alt=""></div>
+              <div class="item partner-item"><img src="./assets/images/partner-2.png" alt=""></div>
+              <div class="item partner-item"><img src="./assets/images/partner-3.png" alt=""></div>
+              <div class="item partner-item"><img src="./assets/images/partner-2.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="team-player flex items-center justify-center">
+      <div class="team-player-background"><img src="./assets/images/background-game-1.jpg" alt=""></div>
+      <div class="team-player-main flex items-center">
+        <div class="player-item flex items-center">
+          <div class="player-dots-carousel flex flex-col items-center justify-center">
+            <div class="dots-item active"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path d="M437.02,330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521,243.251,404,198.548,404,148 C404,66.393,337.607,0,256,0S108,66.393,108,148c0,50.548,25.479,95.251,64.262,121.962 c-36.21,12.495-69.398,33.136-97.281,61.018C26.629,379.333,0,443.62,0,512h40c0-119.103,96.897-216,216-216s216,96.897,216,216 h40C512,443.62,485.371,379.333,437.02,330.98z M256,256c-59.551,0-108-48.448-108-108S196.449,40,256,40 c59.551,0,108,48.448,108,108S315.551,256,256,256z"/></svg></div>
+            <div class="dots-item"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path d="M117.547,234.667H10.88c-5.888,0-10.667,4.779-10.667,10.667v256C0.213,507.221,4.992,512,10.88,512h106.667 c5.888,0,10.667-4.779,10.667-10.667v-256C128.213,239.445,123.456,234.667,117.547,234.667z"/><path d="M309.12,0H202.453c-5.888,0-10.667,4.779-10.667,10.667v490.667c0,5.888,4.779,10.667,10.667,10.667H309.12 c5.888,0,10.667-4.779,10.667-10.667V10.667C319.787,4.779,315.008,0,309.12,0z"/><path d="M501.12,106.667H394.453c-5.888,0-10.667,4.779-10.667,10.667v384c0,5.888,4.779,10.667,10.667,10.667H501.12 c5.888,0,10.667-4.779,10.667-10.667v-384C511.787,111.445,507.008,106.667,501.12,106.667z"/></svg></div>
+            <div class="dots-item"><svg xmlns="http://www.w3.org/2000/svg" height="512pt" version="1.1" viewBox="0 0 512.00099 512" width="512pt"><path d="M 497 36.953125 L 431.296875 36.953125 C 431.535156 29.675781 431.667969 22.355469 431.667969 15 C 431.667969 6.714844 424.949219 0 416.667969 0 L 95.332031 0 C 87.050781 0 80.332031 6.714844 80.332031 15 C 80.332031 22.355469 80.464844 29.675781 80.703125 36.953125 L 15 36.953125 C 6.714844 36.953125 0 43.667969 0 51.953125 C 0 119.164062 17.566406 182.574219 49.460938 230.507812 C 80.988281 277.894531 122.984375 305.074219 168.351562 307.71875 C 178.636719 318.910156 189.507812 328.035156 200.832031 334.996094 L 200.832031 401.664062 L 175.667969 401.664062 C 145.246094 401.664062 120.5 426.414062 120.5 456.832031 L 120.5 481.996094 L 119.433594 481.996094 C 111.148438 481.996094 104.433594 488.714844 104.433594 496.996094 C 104.433594 505.28125 111.148438 511.996094 119.433594 511.996094 L 392.566406 511.996094 C 400.851562 511.996094 407.566406 505.28125 407.566406 496.996094 C 407.566406 488.714844 400.851562 481.996094 392.566406 481.996094 L 391.5 481.996094 L 391.5 456.832031 C 391.5 426.414062 366.753906 401.664062 336.332031 401.664062 L 311.167969 401.664062 L 311.167969 334.996094 C 322.492188 328.039062 333.367188 318.910156 343.652344 307.71875 C 389.015625 305.074219 431.011719 277.894531 462.542969 230.507812 C 494.4375 182.574219 512 119.164062 512 51.953125 C 512 43.667969 505.285156 36.953125 497 36.953125 Z M 74.4375 213.890625 C 48.128906 174.355469 32.671875 122.644531 30.316406 66.953125 L 82.378906 66.953125 C 87.789062 135.414062 103.859375 198.695312 128.976562 248.925781 C 132.976562 256.925781 137.160156 264.484375 141.5 271.601562 C 116.550781 262.179688 93.460938 242.484375 74.4375 213.890625 Z M 361.5 456.832031 L 361.5 482 L 150.5 482 L 150.5 456.832031 C 150.5 442.957031 161.789062 431.664062 175.667969 431.664062 L 336.332031 431.664062 C 350.210938 431.664062 361.5 442.957031 361.5 456.832031 Z M 281.167969 401.664062 L 230.832031 401.664062 L 230.832031 348.03125 C 239.078125 350.203125 247.480469 351.332031 256 351.332031 C 264.519531 351.332031 272.921875 350.203125 281.167969 348.03125 Z M 290.457031 312.34375 C 289.78125 312.621094 289.132812 312.957031 288.511719 313.328125 C 277.910156 318.601562 267.015625 321.332031 256 321.332031 C 244.988281 321.332031 234.097656 318.601562 223.5 313.335938 C 222.871094 312.957031 222.21875 312.621094 221.535156 312.335938 C 209.773438 306.117188 198.394531 296.726562 187.632812 284.386719 C 187.066406 283.578125 186.429688 282.832031 185.722656 282.152344 C 175.039062 269.46875 164.988281 253.867188 155.808594 235.507812 C 128.242188 180.378906 112.320312 107.890625 110.507812 30 L 401.492188 30 C 399.675781 107.890625 383.753906 180.382812 356.191406 235.507812 C 347.011719 253.867188 336.960938 269.46875 326.28125 282.152344 C 325.570312 282.832031 324.925781 283.582031 324.363281 284.390625 C 313.601562 296.734375 302.21875 306.121094 290.457031 312.34375 Z M 437.5625 213.890625 C 418.539062 242.484375 395.449219 262.179688 370.5 271.601562 C 374.839844 264.484375 379.023438 256.925781 383.023438 248.925781 C 408.140625 198.695312 424.207031 135.414062 429.621094 66.953125 L 481.683594 66.953125 C 479.328125 122.644531 463.871094 174.355469 437.5625 213.890625 Z M 437.5625 213.890625 " style="stroke:none; fill-rule:nonzero; fill-opacity:1;"/></svg></div>
+            <div class="dots-item"><svg height="512pt" viewBox="0 -39 512 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m492 0h-472c-11.046875 0-20 8.953125-20 20v314.667969c0 11.046875 8.953125 20 20 20h124.972656l-24.859375 49.722656c-6.636719 13.269531 3.023438 28.941406 17.886719 28.941406h236c14.839844 0 24.535156-15.648437 17.890625-28.941406l-24.863281-49.722656h124.972656c11.046875 0 20-8.953125 20-20v-314.667969c0-11.046875-8.953125-20-20-20zm-150.359375 393.335938h-171.28125l19.335937-38.667969h132.609376zm130.359375-78.667969h-432v-274.667969h432zm0 0"/></svg></div>
+            <div class="dots-item"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve"><path d="M443.86,196.919L141.46,10.514C119.582-2.955,93.131-3.515,70.702,9.016c-22.429,12.529-35.819,35.35-35.819,61.041 v371.112c0,38.846,31.3,70.619,69.77,70.829c0.105,0,0.21,0.001,0.313,0.001c12.022-0.001,24.55-3.769,36.251-10.909 c9.413-5.743,12.388-18.029,6.645-27.441c-5.743-9.414-18.031-12.388-27.441-6.645c-5.473,3.338-10.818,5.065-15.553,5.064 c-14.515-0.079-30.056-12.513-30.056-30.898V70.058c0-11.021,5.744-20.808,15.364-26.183c9.621-5.375,20.966-5.135,30.339,0.636 l302.401,186.405c9.089,5.596,14.29,14.927,14.268,25.601c-0.022,10.673-5.261,19.983-14.4,25.56L204.147,415.945 c-9.404,5.758-12.36,18.049-6.602,27.452c5.757,9.404,18.048,12.36,27.452,6.602l218.611-133.852 c20.931-12.769,33.457-35.029,33.507-59.55C477.165,232.079,464.729,209.767,443.86,196.919z"/></svg></div>
+          </div>
+          <div class="owl-carousel owl-theme player-carousel">
+            <div class="item">
+              <div class="player-carousel-item">
+                <h3 class="name uppercase">Sarah stacy</h3>
+                <h1 class="title">Fayedbebop</h1>
+                <div class="player-info-detail flex flex-wrap">
+                  <div class="info-item">
+                    <p class="des uppercase">age</p>
+                    <h4 class="title uppercase">22 years</h4>
+                  </div>
+                  <div class="info-item">
+                    <p class="des uppercase">since</p>
+                    <h4 class="title uppercase">march 2015</h4>
+                  </div>
+                  <div class="info-item">
+                    <p class="des uppercase">born</p>
+                    <h4 class="title uppercase">los angeles, usa</h4>
+                  </div>
+                  <div class="info-item">
+                    <p class="des uppercase">team</p>
+                    <h4 class="title uppercase">xenowatch</h4>
+                  </div>
+                  <div class="info-item">
+                    <p class="des uppercase">role</p>
+                    <h4 class="title uppercase">support</h4>
+                  </div>
+                  <div class="info-item">
+                    <p class="des uppercase">social</p>
+                    <h4 class="title uppercase"></h4>
+                  </div>
+                </div>
+                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus veritatis officia, voluptate reiciendis, laudantium ab iure rerum nam maxime molestias, quo assumenda dicta totam quos. Fuga, facere ex! Rerum, numquam!</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="player-carousel-item">
+                <h3 class="name">Sarah stacy</h3>
+                <h1 class="title uppercase">Statistics</h1>
+                <div class="statistics-detail flex flex-wrap">
+                  <div class="statistics-item flex items-center">
+                    <div class="number">5.2</div>
+                    <div class="item-info">
+                      <p class="des uppercase">avg game</p>
+                      <h4 class="title uppercase">kills</h4>
+                    </div>
+                  </div>
+                  <div class="statistics-item flex items-center">
+                    <div class="number">7.1</div>
+                    <div class="item-info">
+                      <p class="des uppercase">avg game (k)</p>
+                      <h4 class="title uppercase">damage</h4>
+                    </div>
+                  </div>
+                  <div class="statistics-item flex items-center">
+                    <div class="number">9.2</div>
+                    <div class="item-info">
+                      <p class="des uppercase">avg game (k)</p>
+                      <h4 class="title uppercase">healing</h4>
+                    </div>
+                  </div>
+                  <div class="statistics-item flex items-center">
+                    <div class="number">98</div>
+                    <div class="item-info">
+                      <p class="des uppercase">games</p>
+                      <h4 class="title uppercase">won</h4>
+                    </div>
+                  </div>
+                  <div class="statistics-item flex items-center">
+                    <div class="number">14</div>
+                    <div class="item-info">
+                      <p class="des uppercase">games</p>
+                      <h4 class="title uppercase">lost</h4>
+                    </div>
+                  </div>
+                  <div class="statistics-item flex items-center">
+                    <div class="number">8.7</div>
+                    <div class="item-info">
+                      <p class="des uppercase">win ratio</p>
+                      <h4 class="title uppercase">87.5%</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="most-player flex items-center justify-between">
+                  <div class="most-player-item flex items-center">
+                    <div class="player-avatar"><img src="./assets/images/player-hero.png" alt=""></div>
+                    <div class="player-info">
+                      <h4 class="title uppercase">Simmelia</h4>
+                      <p class="des uppercase">Most played hero</p>
+                    </div>
+                  </div>
+                  <div class="most-player-item flex items-center">
+                    <div class="player-info">
+                      <h4 class="title uppercase">Support</h4>
+                      <p class="des uppercase">Hero role</p>
+                    </div>
+                    <div class="player-kda">
+                      <h4 class="title uppercase"><span class="goldenrod-color">12</span>/ <span class="light-blue-grey-color">10</span>/ <span class="red-pink-color">5</span></h4>
+                      <p class="des uppercase">Medals won</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="player-carousel-item">
+                <h3 class="name">Sarah stacy</h3>
+                <h1 class="title uppercase">Achievements</h1>
+                <div class="reward-wrap">
+                  <div class="reward-item flex items-center">
+                    <div class="item-icon"><svg xmlns="http://www.w3.org/2000/svg" height="512pt" version="1.1" viewBox="0 0 512.00099 512" width="512pt"><path d="M 497 36.953125 L 431.296875 36.953125 C 431.535156 29.675781 431.667969 22.355469 431.667969 15 C 431.667969 6.714844 424.949219 0 416.667969 0 L 95.332031 0 C 87.050781 0 80.332031 6.714844 80.332031 15 C 80.332031 22.355469 80.464844 29.675781 80.703125 36.953125 L 15 36.953125 C 6.714844 36.953125 0 43.667969 0 51.953125 C 0 119.164062 17.566406 182.574219 49.460938 230.507812 C 80.988281 277.894531 122.984375 305.074219 168.351562 307.71875 C 178.636719 318.910156 189.507812 328.035156 200.832031 334.996094 L 200.832031 401.664062 L 175.667969 401.664062 C 145.246094 401.664062 120.5 426.414062 120.5 456.832031 L 120.5 481.996094 L 119.433594 481.996094 C 111.148438 481.996094 104.433594 488.714844 104.433594 496.996094 C 104.433594 505.28125 111.148438 511.996094 119.433594 511.996094 L 392.566406 511.996094 C 400.851562 511.996094 407.566406 505.28125 407.566406 496.996094 C 407.566406 488.714844 400.851562 481.996094 392.566406 481.996094 L 391.5 481.996094 L 391.5 456.832031 C 391.5 426.414062 366.753906 401.664062 336.332031 401.664062 L 311.167969 401.664062 L 311.167969 334.996094 C 322.492188 328.039062 333.367188 318.910156 343.652344 307.71875 C 389.015625 305.074219 431.011719 277.894531 462.542969 230.507812 C 494.4375 182.574219 512 119.164062 512 51.953125 C 512 43.667969 505.285156 36.953125 497 36.953125 Z M 74.4375 213.890625 C 48.128906 174.355469 32.671875 122.644531 30.316406 66.953125 L 82.378906 66.953125 C 87.789062 135.414062 103.859375 198.695312 128.976562 248.925781 C 132.976562 256.925781 137.160156 264.484375 141.5 271.601562 C 116.550781 262.179688 93.460938 242.484375 74.4375 213.890625 Z M 361.5 456.832031 L 361.5 482 L 150.5 482 L 150.5 456.832031 C 150.5 442.957031 161.789062 431.664062 175.667969 431.664062 L 336.332031 431.664062 C 350.210938 431.664062 361.5 442.957031 361.5 456.832031 Z M 281.167969 401.664062 L 230.832031 401.664062 L 230.832031 348.03125 C 239.078125 350.203125 247.480469 351.332031 256 351.332031 C 264.519531 351.332031 272.921875 350.203125 281.167969 348.03125 Z M 290.457031 312.34375 C 289.78125 312.621094 289.132812 312.957031 288.511719 313.328125 C 277.910156 318.601562 267.015625 321.332031 256 321.332031 C 244.988281 321.332031 234.097656 318.601562 223.5 313.335938 C 222.871094 312.957031 222.21875 312.621094 221.535156 312.335938 C 209.773438 306.117188 198.394531 296.726562 187.632812 284.386719 C 187.066406 283.578125 186.429688 282.832031 185.722656 282.152344 C 175.039062 269.46875 164.988281 253.867188 155.808594 235.507812 C 128.242188 180.378906 112.320312 107.890625 110.507812 30 L 401.492188 30 C 399.675781 107.890625 383.753906 180.382812 356.191406 235.507812 C 347.011719 253.867188 336.960938 269.46875 326.28125 282.152344 C 325.570312 282.832031 324.925781 283.582031 324.363281 284.390625 C 313.601562 296.734375 302.21875 306.121094 290.457031 312.34375 Z M 437.5625 213.890625 C 418.539062 242.484375 395.449219 262.179688 370.5 271.601562 C 374.839844 264.484375 379.023438 256.925781 383.023438 248.925781 C 408.140625 198.695312 424.207031 135.414062 429.621094 66.953125 L 481.683594 66.953125 C 479.328125 122.644531 463.871094 174.355469 437.5625 213.890625 Z M 437.5625 213.890625 " style="stroke:none;fill-rule:nonzero;fill-opacity:1;"/></svg></div>
+                    <div class="item-info">
+                      <h4 class="title uppercase">Xenowatch world league</h4>
+                      <p class="des acid-green-color uppercase" style="margin-bottom: 3px;">1st place</p>
+                      <p class="des uppercase">February 14th, 2017</p>
+                    </div>
+                  </div>
+                  <div class="reward-item flex items-center">
+                    <div class="item-icon"><svg id="Capa_1" enable-background="new 0 0 512.001 512.001" height="512" viewBox="0 0 512.001 512.001" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m256 361c74.439 0 135-60.561 135-135s-60.56-135-135-135-135 60.561-135 135 60.561 135 135 135zm0-240c57.897 0 105 47.103 105 105s-47.103 105-105 105-105-47.103-105-105 47.104-105 105-105z"/><path d="m1.121 416.688c2.308 5.633 7.792 9.312 13.879 9.312h71v71c0 6.082 3.673 11.563 9.298 13.874 5.601 2.302 12.071 1.017 16.368-3.327l96.789-97.878 36.939 36.938c2.929 2.929 6.768 4.393 10.606 4.393 3.839 0 7.678-1.464 10.606-4.394l36.939-36.938 96.789 97.878c4.299 4.347 10.771 5.628 16.368 3.327 5.626-2.31 9.298-7.791 9.298-13.873v-71h71c6.087 0 11.571-3.679 13.88-9.312 2.308-5.633.983-12.103-3.354-16.375l-59.327-58.438c3.849-3.664 5.628-9.263 4.156-14.758l-14.001-52.258 38.253-38.254c5.858-5.858 5.858-15.355 0-21.213l-38.253-38.254 14.001-52.258c2.144-8.002-2.604-16.227-10.606-18.371l-52.258-13.999-14.002-52.257c-2.144-8.002-10.367-12.75-18.371-10.607l-52.149 13.973-38.244-39.106c-2.823-2.886-6.688-4.513-10.725-4.513-4.036 0-7.902 1.626-10.724 4.512l-38.244 39.106-52.149-13.973c-8.006-2.144-16.228 2.605-18.371 10.607l-14.002 52.258-52.257 14.002c-8.002 2.144-12.75 10.369-10.606 18.371l14.001 52.258-38.253 38.254c-5.858 5.858-5.858 15.355 0 21.213l38.253 38.254-14.001 52.258c-1.472 5.495.306 11.094 4.156 14.758l-59.329 58.436c-4.337 4.272-5.662 10.741-3.353 16.374zm409.879-20.688c-8.284 0-15 6.716-15 15v49.498l-37.406-37.826c7.514 1.231 14.882-3.414 16.894-10.924l14.002-52.257 26.603-7.128 44.303 43.637zm-343.786-170 33.771-33.771c3.79-3.79 5.27-9.313 3.882-14.489l-12.361-46.134 46.134-12.361c5.176-1.387 9.22-5.43 10.606-10.607l12.361-46.134 46.133 12.361c5.235 1.402 10.818-.127 14.606-4.001l33.654-34.41 33.653 34.412c3.788 3.874 9.37 5.403 14.606 4.001l46.133-12.361 12.361 46.134c1.387 5.177 5.43 9.22 10.606 10.607l46.134 12.361-12.361 46.134c-1.387 5.176.093 10.699 3.882 14.489l33.773 33.769-33.771 33.771c-3.79 3.79-5.27 9.313-3.882 14.489l12.361 46.134-46.134 12.361c-5.176 1.387-9.22 5.43-10.606 10.607l-12.361 46.134-46.133-12.361c-5.177-1.386-10.699.093-14.489 3.882l-33.772 33.77-33.771-33.771c-3.796-3.797-9.321-5.267-14.489-3.882l-46.133 12.361-12.361-46.134c-1.387-5.177-5.43-9.22-10.606-10.607l-46.134-12.361 12.361-46.134c1.387-5.176-.093-10.699-3.882-14.489zm28.692 126.363 26.603 7.128 14.002 52.257c2.012 7.51 9.379 12.155 16.894 10.924l-37.405 37.826v-49.498c0-8.284-6.716-15-15-15h-49.396z"/><path d="m208.711 246.918-6.026 35.132c-.965 5.627 1.348 11.315 5.967 14.671 4.62 3.356 10.743 3.799 15.797 1.142l31.551-16.588 31.551 16.587c5.073 2.668 11.197 2.2 15.797-1.142 4.619-3.356 6.933-9.043 5.967-14.671l-6.026-35.132 25.525-24.881c4.088-3.985 5.56-9.946 3.795-15.376-1.764-5.43-6.458-9.388-12.108-10.209l-35.275-5.126-15.775-31.964c-2.526-5.119-7.741-8.361-13.451-8.361-5.709 0-10.924 3.241-13.451 8.362l-15.775 31.964-35.275 5.126c-5.65.821-10.344 4.779-12.108 10.209-1.765 5.43-.293 11.391 3.795 15.376zm30.181-27.038c4.886-.71 9.109-3.778 11.294-8.206l5.814-11.78 5.814 11.781c2.185 4.427 6.409 7.496 11.294 8.206l13.001 1.889-9.408 9.17c-3.535 3.446-5.148 8.411-4.314 13.277l2.221 12.948-11.628-6.113c-4.37-2.298-9.591-2.297-13.96 0l-11.628 6.113 2.221-12.948c.834-4.866-.779-9.831-4.314-13.277l-9.408-9.17z"/></g></svg></div>
+                    <div class="item-info">
+                      <h4 class="title uppercase">Xenowatch world league</h4>
+                      <p class="des acid-green-color uppercase" style="margin-bottom: 3px;">1st place</p>
+                      <p class="des uppercase">February 14th, 2017</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="record-wrap flex flex-wrap">
+                  <div class="record-item flex items-center">
+                    <div class="item-icon"><svg id="bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m12 22.25c-5.652 0-10.25-4.598-10.25-10.25s4.598-10.25 10.25-10.25 10.25 4.598 10.25 10.25-4.598 10.25-10.25 10.25zm0-18.5c-4.549 0-8.25 3.701-8.25 8.25s3.701 8.25 8.25 8.25 8.25-3.701 8.25-8.25-3.701-8.25-8.25-8.25z"/><path d="m12 5.5c-.552 0-1-.448-1-1v-3.5c0-.552.448-1 1-1s1 .448 1 1v3.5c0 .552-.448 1-1 1z"/><path d="m23 13h-3.5c-.552 0-1-.448-1-1s.448-1 1-1h3.5c.552 0 1 .448 1 1s-.448 1-1 1z"/><path d="m12 24c-.552 0-1-.448-1-1v-3.5c0-.552.448-1 1-1s1 .448 1 1v3.5c0 .552-.448 1-1 1z"/><path d="m4.5 13h-3.5c-.552 0-1-.448-1-1s.448-1 1-1h3.5c.552 0 1 .448 1 1s-.448 1-1 1z"/><path d="m12 15c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3-1.346 3-3 3zm0-4c-.551 0-1 .449-1 1s.449 1 1 1 1-.449 1-1-.449-1-1-1z"/></svg></div>
+                    <div class="item-info">
+                      <h4 class="title uppercase">28 kills</h4>
+                      <p class="des uppercase">record kills</p>
+                    </div>
+                  </div>
+                  <div class="record-item flex items-center">
+                    <div class="item-icon"><svg id="Capa_1" enable-background="new 0 0 511.653 511.653" height="512" viewBox="0 0 511.653 511.653" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m380.01 162.453-16.019-12.996-7.46 19.247c-.143.367-14.473 36.601-36.479 30-4.872-1.462-8.14-4.281-10.283-8.874-5.465-11.706-3.14-32.895 5.922-53.981 12.53-29.157 7.043-59.709-15.868-88.355-16.116-20.149-35.479-32.347-36.296-32.857l-23.461-14.637.523 27.649c.009.494.514 49.616-35.857 67.629-22.284 11.036-38.236 29.289-44.919 51.397-6.251 20.682-3.626 43.295 7.203 62.04 4.433 7.673 5.776 14.181 3.994 19.343-2.547 7.375-10.775 11.172-13.237 12.16-26.002 10.443-43.023-24.421-43.711-25.86l-11.861-25.316-14.535 23.881c-18.666 30.666-28.531 65.957-28.531 102.058 0 107.656 86.959 195.371 194.329 196.643.784.02 1.57.03 2.359.03h.001.003c108.456 0 196.691-88.228 196.691-196.673 0-59.384-26.427-114.978-72.508-152.528zm-185.699 257.692-.001-.185c-.147-11.939 2.127-24.742 6.775-38.194l36.971 10.806.373-19.617c.57-30.045 17.513-48.489 31.059-58.467 3.473 15.112 8.888 28.587 16.366 40.809 8.527 13.913 16.602 25.707 24.05 36.367 4.785 6.863 7.499 17.224 7.445 28.425v.072c0 16.424-6.4 31.869-18.021 43.49-11.61 11.609-27.06 18.003-43.504 18.003-.002 0-.003 0-.005 0-33.904-.003-61.496-27.584-61.508-61.509zm144.075 39.588c5.856-12.187 8.959-25.624 8.963-39.541.077-17.481-4.481-33.706-12.845-45.7-8.307-11.891-15.409-22.372-23.066-34.865-8.537-13.951-13.671-30.393-15.692-50.264l-1.977-19.423-18.258 6.914c-1.712.648-17.179 6.747-33.032 21.128-16.812 15.25-27.664 34.108-31.966 55.284l-26.814-7.837-5.293 12.072c-9.582 21.853-14.324 42.959-14.095 62.737.014 14.155 3.26 27.568 9.037 39.54-50.263-28.736-84.214-82.876-84.214-144.799 0-22.526 4.528-44.675 13.223-65.152 1.333 1.474 2.751 2.946 4.254 4.394 18.374 17.686 40.513 22.599 62.338 13.836 14.744-5.919 25.83-16.929 30.416-30.206 3.265-9.453 4.81-24.785-6.374-44.144-6.797-11.766-8.382-25.387-4.463-38.353 4.259-14.088 14.741-25.876 29.517-33.194 31.096-15.401 43.808-44.313 48.993-66.245 3.272 3.218 6.634 6.863 9.794 10.871 15.413 19.542 19.213 38.793 11.295 57.219-12.664 29.47-14.737 58.821-5.544 78.515 5.775 12.374 15.751 20.99 28.847 24.919 20.586 6.177 40.719-1.013 56.693-20.243 2.501-3.01 4.709-6.075 6.631-9.02 30.553 31.046 47.763 72.692 47.763 116.803.001 61.891-33.912 116.006-84.131 144.754z"/></svg></div>
+                    <div class="item-info">
+                      <h4 class="title uppercase">38.456</h4>
+                      <p class="des uppercase">record damage</p>
+                    </div>
+                  </div>
+                  <div class="record-item flex items-center">
+                    <div class="item-icon"><svg id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m437.02 74.98c-48.353-48.351-112.64-74.98-181.02-74.98s-132.667 26.629-181.02 74.98c-48.351 48.353-74.98 112.64-74.98 181.02s26.629 132.667 74.98 181.02c48.353 48.351 112.64 74.98 181.02 74.98s132.667-26.629 181.02-74.98c48.351-48.353 74.98-112.64 74.98-181.02s-26.629-132.667-74.98-181.02zm-21.214 340.826c-42.686 42.686-99.439 66.194-159.806 66.194s-117.12-23.508-159.806-66.194-66.194-99.439-66.194-159.806 23.508-117.12 66.194-159.806 99.439-66.194 159.806-66.194 117.12 23.508 159.806 66.194 66.194 99.439 66.194 159.806-23.508 117.12-66.194 159.806z"/><path d="m256 180c-41.907 0-76 34.094-76 76s34.093 76 76 76c41.906 0 76-34.094 76-76s-34.094-76-76-76zm0 122c-25.364 0-46-20.636-46-46s20.636-46 46-46 46 20.636 46 46-20.636 46-46 46z"/><path d="m452.036 241h-30.721c-7.163-79.586-70.729-143.152-150.315-150.315v-30.721h-30v30.721c-79.587 7.163-143.152 70.729-150.315 150.315h-30.721v30h30.721c7.163 79.586 70.728 143.152 150.315 150.315v30.721h30v-30.721c79.586-7.163 143.152-70.729 150.315-150.315h30.721zm-181.036 150.169v-29.205h-30v29.205c-63.031-6.948-113.221-57.139-120.169-120.169h29.205v-30h-29.205c6.948-63.03 57.138-113.221 120.169-120.169v29.205h30v-29.205c63.03 6.948 113.221 57.139 120.169 120.169h-29.205v30h29.205c-6.948 63.03-57.139 113.221-120.169 120.169z"/></svg></div>
+                    <div class="item-info">
+                      <h4 class="title uppercase">58.607</h4>
+                      <p class="des uppercase">record healing</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="player-carousel-item">
+                <h3 class="name">Sarah stacy</h3>
+                <h1 class="title uppercase">Hardware</h1>
+                <div class="hardware-wrap flex flex-wrap">
+                  <div class="hardware-item flex items-center">
+                    <div class="item-icon"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path d="M256,0C156.595,0,75.726,82.14,75.726,183.099v145.807C75.726,429.865,156.595,512,256,512 c99.399,0,180.274-81.886,180.274-182.534V183.099C436.274,82.14,355.399,0,256,0z M402.366,329.466 c0,81.954-65.656,148.627-146.366,148.627c-80.705,0-146.366-66.927-146.366-149.192V183.099 c0-82.265,65.661-149.192,146.366-149.192c80.711,0,146.366,66.927,146.366,149.192V329.466z"/><path d="M256,140.15c-9.364,0-16.954,7.59-16.954,16.954v59.338c0,9.364,7.59,16.954,16.954,16.954 c9.364,0,16.954-7.59,16.954-16.954v-59.338C272.954,147.74,265.364,140.15,256,140.15z"/></svg>
+                    </div>
+                    <div class="item-info">
+                      <h4 class="title uppercase">Raptor rm-2569</h4>
+                      <p class="des acid-green-color uppercase" style="margin-bottom: 3px;">raxor</p>
+                      <p class="des uppercase">Get it now!</p>
+                    </div>
+                  </div>
+                  <div class="hardware-item flex items-center">
+                    <div class="item-icon"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 480.058 480.058" style="enable-background:new 0 0 480.058 480.058;" xml:space="preserve"><path d="M458.509,140.744v-0.016C403.651,20.065,261.362-33.28,140.699,21.579c-52.812,24.01-95.139,66.338-119.15,119.15 c-14.238,31.172-21.578,65.05-21.52,99.32v75.152c-0.038,14.859,5.87,29.116,16.408,39.592l32.336,32.344l4.392,12.112 c13.553,35.926,48.233,59.448,86.624,58.752c1.68,0,3.384-0.208,5.08-0.288l0.4,1.104c6.048,16.714,24.501,25.361,41.215,19.313 c0,0,0.001,0,0.001,0l1.312-0.472c16.709-6.024,25.37-24.453,19.346-41.161c-0.001-0.002-0.002-0.005-0.002-0.007l-63.368-175.2 c-6.094-16.681-24.516-25.31-41.232-19.312l-1.296,0.472c-14.203,5.077-22.933,19.383-20.952,34.336 c-13.759,10.017-24.596,23.525-31.392,39.128c-0.548-1.074-0.846-2.258-0.872-3.464v-72.4c0-106.039,85.961-192,192-192 s192,85.961,192,192v72.4c-0.048,0.568-0.161,1.129-0.336,1.672c-6.853-14.858-17.392-27.716-30.616-37.352 c1.975-14.943-6.745-29.238-20.936-34.32l-1.328-0.48c-16.703-5.99-35.107,2.64-41.184,19.312l-63.376,175.2 c-6.03,16.705,2.623,35.136,19.328,41.168l1.312,0.48c16.716,6.029,35.157-2.615,41.216-19.32l0.4-1.104 c1.688,0.08,3.4,0.288,5.08,0.288c38.389,0.697,73.069-22.821,86.624-58.744l5.128-14.176l30.28-30.288 c10.536-10.474,16.444-24.728,16.408-39.584v-75.152C480.085,205.784,472.745,171.912,458.509,140.744z M97.525,265.825 c1.81-3.896,5.111-6.9,9.16-8.336l1.296-0.472c8.41-3.044,17.696,1.303,20.744,9.712l63.368,175.2 c3.026,8.382-1.316,17.63-9.698,20.656c-0.007,0.003-0.014,0.005-0.022,0.008l-1.312,0.472 c-8.407,3.029-17.681-1.314-20.736-9.712l-2.4-6.696L96.965,278.12C95.505,274.111,95.706,269.685,97.525,265.825z M85.317,293.057v-0.032L139.229,442c-28.981,0.335-55.588-15.974-68.44-41.952c0.2,0,0.408,0,0.608,0c0.2,0,0.424,0,0.632,0 c0.8,0,1.52-0.152,2.28-0.224c0.76-0.072,1.312-0.072,1.968-0.184c1.048-0.2,2.082-0.467,3.096-0.8 c0.576-0.176,1.152-0.288,1.712-0.504c1.073-0.443,2.113-0.962,3.112-1.552c0.472-0.264,0.968-0.456,1.424-0.752 c11.558-7.456,14.884-22.869,7.429-34.427c-0.969-1.502-2.097-2.896-3.365-4.157L61.021,328.76 C65.632,314.827,74.048,302.46,85.317,293.057z M32.029,240.049v72.4c-0.018,6.369,2.514,12.479,7.032,16.968l39.312,39.32 c3.504,3.504,3.504,9.184,0,12.688c-3.504,3.504-9.184,3.504-12.688,0l-37.936-37.952c-7.527-7.48-11.747-17.661-11.72-28.272 v-75.152c-0.052-30.254,6.078-60.2,18.016-88h17.488C38.694,179.609,32.037,209.644,32.029,240.049z M240.029,32.049 c-74.312,0.016-142.976,39.656-180.152,104H41.629C99.06,26.475,234.444-15.795,344.017,41.636 c40.336,21.142,73.271,54.076,94.412,94.412h-18.248C383.005,71.704,314.341,32.065,240.029,32.049z M332.165,422.672l-8.68,24 l-2.4,6.696c-3.044,8.413-12.332,12.766-20.745,9.723c-0.002-0.001-0.005-0.002-0.007-0.003l-1.312-0.48 c-8.392-3.021-12.747-12.272-9.728-20.664l63.376-175.2c3.035-8.402,12.307-12.754,20.709-9.719 c0.006,0.002,0.013,0.005,0.019,0.007l1.328,0.48c8.386,3.014,12.742,12.256,9.728,20.642c-0.003,0.007-0.005,0.014-0.008,0.022 L332.165,422.672z M342.189,442l35.352-97.752l18.52-51.2c11.002,9.182,19.298,21.184,24,34.72l-29.648,29.656 c-9.734,9.758-9.734,25.554,0,35.312c1.284,1.271,2.703,2.398,4.232,3.36c0.504,0.32,1.032,0.536,1.552,0.8 c1.03,0.577,2.099,1.079,3.2,1.504c0.624,0.232,1.256,0.384,1.896,0.56c1.029,0.304,2.076,0.542,3.136,0.712 c0.68,0.096,1.352,0.144,2.032,0.192c0.552,0,1.088,0.16,1.6,0.16c0.512,0,0.968-0.112,1.456-0.144c0.488-0.032,0.8,0.048,1.16,0 C397.869,425.942,371.226,442.327,342.189,442z M464.029,315.201c0.026,10.613-4.194,20.796-11.72,28.28l-31.528,31.536l-6.4,6.4 c-3.504,3.504-9.184,3.504-12.688,0c-3.504-3.504-3.504-9.184,0-12.688l39.312-39.32c4.51-4.49,7.039-10.596,7.024-16.96v-72.4 c-0.008-30.405-6.664-60.44-19.504-88h17.488c11.938,27.8,18.068,57.746,18.016,88V315.201z"/></svg>
+                    </div>
+                    <div class="item-info">
+                      <h4 class="title uppercase">soundmaster x5</h4>
+                      <p class="des acid-green-color uppercase" style="margin-bottom: 3px;">sorny</p>
+                      <p class="des uppercase">Get it now!</p>
+                    </div>
+                  </div>
+                  <div class="hardware-item flex items-center">
+                    <div class="item-icon"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve"><path d="M504.53,375.058h-14.984V111.17c0-16.925-13.77-30.695-30.696-30.695H53.149c-16.926,0-30.696,13.77-30.696,30.695 v263.889H7.47c-4.125,0-7.47,3.344-7.47,7.47v8.943c0,22.086,17.968,40.054,40.054,40.054h327.989c4.125,0,7.47-3.344,7.47-7.469 c0-4.126-3.344-7.47-7.47-7.47H40.054c-13.849,0-25.115-11.267-25.115-25.115v-1.474h178.32v13.294c0,4.126,3.344,7.47,7.47,7.47 h110.543c4.125,0,7.47-3.344,7.47-7.47v-13.294h178.32v1.474c0,13.849-11.267,25.115-25.115,25.115h-51.118 c-4.125,0-7.47,3.344-7.47,7.47c0,4.126,3.344,7.469,7.47,7.469h51.118c22.086,0,40.054-17.969,40.054-40.054v-8.943 C512,378.402,508.656,375.058,504.53,375.058z M303.802,395.822h-95.604v-5.825h95.604V395.822z M474.608,374.428H37.393V111.17 c0-8.688,7.068-15.756,15.757-15.756h405.701c8.688,0,15.757,7.068,15.757,15.756V374.428z"/><path d="M440.307,109.615H71.693c-12.182,0-22.093,9.911-22.093,22.094v79.475c0,4.126,3.344,7.47,7.47,7.47s7.47-3.344,7.47-7.47 v-79.475c0-3.945,3.209-7.154,7.153-7.154h368.613c3.944,0,7.153,3.21,7.153,7.154v214.509H64.54v-81.254 c0-4.126-3.344-7.47-7.47-7.47s-7.47,3.344-7.47,7.47v88.723c0,4.126,3.344,7.47,7.47,7.47h397.86c4.125,0,7.47-3.344,7.47-7.47 V131.708C462.399,119.525,452.488,109.615,440.307,109.615z"/></svg>
+                    </div>
+                    <div class="item-info">
+                      <h4 class="title uppercase">carbon z81 rgb</h4>
+                      <p class="des acid-green-color uppercase" style="margin-bottom: 3px;">buccaneer</p>
+                      <p class="des uppercase">Get it now!</p>
+                    </div>
+                  </div>
+                  <div class="hardware-item flex items-center">
+                    <div class="item-icon"><svg id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m467 14.292h-422c-24.813 0-45 20.187-45 45v305c0 24.813 20.187 45 45 45h151.198l-13.189 58.416h-63.275v30h272.532v-30h-63.275l-13.189-58.416h151.198c24.813 0 45-20.187 45-45v-305c0-24.813-20.187-45-45-45zm-422 30h422c8.271 0 15 6.729 15 15v240h-452v-240c0-8.271 6.729-15 15-15zm240.047 365 13.189 58.416h-84.471l13.189-58.416zm181.953-30h-422c-8.271 0-15-6.729-15-15v-35h452v35c0 8.271-6.729 15-15 15z"/><path d="m134.582 156.792h142.836v30h-142.836z" transform="matrix(.707 -.707 .707 .707 -61.139 195.981)"/><path d="m234.582 156.792h142.836v30h-142.836z" transform="matrix(.707 -.707 .707 .707 -31.85 266.691)"/></g></svg>
+                    </div>
+                    <div class="item-info">
+                      <h4 class="title uppercase">glx 0019 4k</h4>
+                      <p class="des acid-green-color uppercase" style="margin-bottom: 3px;">sangsteen</p>
+                      <p class="des uppercase">Get it now!</p>
+                    </div>
+                  </div>
+                  <div class="hardware-item flex items-center">
+                    <div class="item-icon"><svg height="512pt" viewBox="0 0 512.07132 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m471.023438 225.453125c-15.527344-42.425781-53.011719-72.960937-97.695313-79.589844-13.964844-2.402343-28.316406.691407-40.046875 8.632813-6.945312 4.679687-15.050781 7.339844-23.417969 7.679687h-107.65625c-8.367187-.339843-16.476562-3-23.421875-7.679687-11.738281-7.929688-26.082031-11.019532-40.039062-8.625-17.566406 2.847656-34.371094 9.234375-49.390625 18.773437-21.878907 14.925781-38.722657 36.132813-48.308594 60.824219-27.6875 66.441406-41.636719 137.800781-41.0117188 209.773438-.6015622 22.792968 6.4804688 45.128906 20.1132818 63.40625 6.359374 8.34375 16.21875 13.289062 26.710937 13.394531 11.03125.195312 21.511719-4.828125 28.269531-13.550781l50.421875-68.113282c9.671875-13.003906 24.910157-20.6875 41.117188-20.734375h178.738281c16.234375.019531 31.503906 7.707031 41.1875 20.734375l50.648438 68.394532c6.683593 8.371093 16.808593 13.253906 27.519531 13.269531h.453125c10.496094-.109375 20.355468-5.054688 26.714844-13.40625 13.628906-18.273438 20.710937-40.605469 20.105468-63.394531.625-71.976563-13.324218-143.335938-41.011718-209.78125zm23.945312 209.789063c.570312 19.03125-5.269531 37.699218-16.578125 53.011718-3.171875 4.210938-8.128906 6.699219-13.398437 6.722656-5.5625.242188-10.894532-2.238281-14.292969-6.648437l-50.449219-68.101563c-12.898438-17.351562-33.226562-27.597656-54.84375-27.648437h-178.738281c-21.621094.050781-41.949219 10.296875-54.84375 27.648437l-50.21875 67.820313c-3.46875 4.363281-8.730469 6.914063-14.304688 6.929687h-.222656c-5.265625-.023437-10.222656-2.511718-13.386719-6.722656-11.316406-15.3125-17.160156-33.980468-16.589844-53.011718-.636718-69.636719 12.832032-138.6875 39.59375-202.980469 8.167969-21.574219 22.738282-40.136719 41.753907-53.195313 13.085937-8.304687 27.714843-13.863281 43.007812-16.351562 9.628907-1.703125 19.542969.386718 27.667969 5.828125 9.773438 6.664062 21.257812 10.378906 33.082031 10.699219h107.65625c11.828125-.324219 23.3125-4.039063 33.09375-10.699219 8.117188-5.445313 18.03125-7.53125 27.65625-5.828125 15.292969 2.488281 29.925781 8.046875 43.007813 16.351562 19.015625 13.058594 33.582031 31.617188 41.753906 53.1875 26.761719 64.296875 40.230469 133.347656 39.59375 202.988282zm0 0"/><path d="m451.609375 298.976562c-4.566406 1.15625-7.332031 5.796876-6.175781 10.367188 5.570312 22.066406 9.628906 44.492188 12.140625 67.113281.484375 4.316407 4.132812 7.582031 8.476562 7.585938.320313 0 .644531-.015625.964844-.050781 4.660156-.527344 8.023437-4.71875 7.523437-9.386719-2.601562-23.398438-6.796874-46.589844-12.550781-69.417969-.546875-2.203125-1.949219-4.097656-3.898437-5.261719-1.945313-1.164062-4.277344-1.507812-6.480469-.949219zm0 0"/><path d="m58.222656 307.464844c-4.582031-1.066406-9.160156 1.777344-10.238281 6.359375-3.3125 14.097656-6.066406 28.6875-8.210937 43.390625-.679688 4.65625 2.539062 8.988281 7.195312 9.675781.414062.058594.828125.085937 1.246094.085937 4.234375-.007812 7.820312-3.113281 8.429687-7.304687 2.074219-14.214844 4.738281-28.328125 7.9375-41.941406.519531-2.203125.140625-4.523438-1.050781-6.449219s-3.101562-3.296875-5.308594-3.816406zm0 0"/><path d="m45.039062 384.042969c-4.695312-.367188-8.800781 3.140625-9.171874 7.835937-1.125 14.351563-1.699219 28.953125-1.699219 43.363282 0 4.714843 3.820312 8.535156 8.535156 8.535156 4.710937 0 8.53125-3.820313 8.53125-8.535156 0-13.96875.554687-28.097657 1.648437-41.992188.1875-2.261719-.535156-4.503906-2.007812-6.230469-1.472656-1.730469-3.570312-2.800781-5.835938-2.976562zm0 0"/><path d="m170.703125 230.445312c0-23.566406-19.101563-42.667968-42.667969-42.667968-23.5625 0-42.667968 19.101562-42.667968 42.667968 0 23.5625 19.105468 42.664063 42.667968 42.664063 23.554688-.027344 42.640625-19.113281 42.667969-42.664063zm-42.667969 25.597657c-14.136718 0-25.597656-11.460938-25.597656-25.597657 0-14.140624 11.460938-25.601562 25.597656-25.601562 14.140625 0 25.601563 11.460938 25.601563 25.601562 0 14.136719-11.460938 25.597657-25.601563 25.597657zm0 0"/><path d="m187.769531 290.175781c-23.566406 0-42.667969 19.105469-42.667969 42.667969s19.101563 42.667969 42.667969 42.667969c23.5625 0 42.667969-19.105469 42.667969-42.667969-.03125-23.550781-19.117188-42.636719-42.667969-42.667969zm24.027344 34.136719h-15.496094v-15.5c7.230469 2.582031 12.917969 8.269531 15.496094 15.5zm-32.5625-15.5v15.5h-15.496094c2.582031-7.230469 8.269531-12.917969 15.496094-15.5zm-15.496094 32.566406h15.496094v15.496094c-7.226563-2.582031-12.914063-8.269531-15.496094-15.496094zm32.5625 15.496094v-15.496094h15.496094c-2.578125 7.226563-8.265625 12.914063-15.496094 15.496094zm0 0"/><path d="m324.300781 290.175781c-23.5625 0-42.664062 19.105469-42.664062 42.667969s19.101562 42.667969 42.664062 42.667969c23.566407 0 42.667969-19.105469 42.667969-42.667969-.027344-23.550781-19.113281-42.636719-42.667969-42.667969zm0 68.269531c-14.136719 0-25.597656-11.460937-25.597656-25.601562 0-14.136719 11.460937-25.601562 25.597656-25.601562 14.140625 0 25.601563 11.464843 25.601563 25.601562 0 14.140625-11.460938 25.601562-25.601563 25.601562zm0 0"/><path d="m332.835938 332.84375c0 4.714844-3.820313 8.535156-8.535157 8.535156-4.710937 0-8.53125-3.820312-8.53125-8.535156 0-4.710938 3.820313-8.53125 8.53125-8.53125 4.714844 0 8.535157 3.820312 8.535157 8.53125zm0 0"/><path d="m230.4375 230.445312c0 4.710938-3.824219 8.53125-8.535156 8.53125-4.710938 0-8.535156-3.820312-8.535156-8.53125 0-4.714843 3.824218-8.535156 8.535156-8.535156 4.710937 0 8.535156 3.820313 8.535156 8.535156zm0 0"/><path d="m298.703125 230.445312c0 4.710938-3.820313 8.53125-8.535156 8.53125-4.710938 0-8.53125-3.820312-8.53125-8.53125 0-4.714843 3.820312-8.535156 8.53125-8.535156 4.714843 0 8.535156 3.820313 8.535156 8.535156zm0 0"/><path d="m264.570312 119.511719c0 4.710937-3.820312 8.53125-8.535156 8.53125-4.710937 0-8.53125-3.820313-8.53125-8.53125 0-4.714844 3.820313-8.535157 8.53125-8.535157 4.714844 0 8.535156 3.820313 8.535156 8.535157zm0 0"/><path d="m196.082031 38.777344c34.746094-28.894532 85.160157-28.894532 119.910157 0 3.625 3.015625 9.011718 2.519531 12.027343-1.105469s2.519531-9.011719-1.105469-12.027344c-41.085937-34.144531-100.671874-34.144531-141.757812 0-3.621094 3.015625-4.117188 8.398438-1.097656 12.023438 3.015625 3.625 8.398437 4.117187 12.023437 1.101562zm0 0"/><path d="m305.921875 73.011719c3.394531 0 6.46875-2.015625 7.824219-5.132813 1.351562-3.113281.730468-6.734375-1.585938-9.21875-14.488281-15.613281-34.824218-24.484375-56.125-24.484375-21.296875 0-41.632812 8.871094-56.125 24.484375-3.210937 3.445313-3.023437 8.847656.425782 12.0625 3.445312 3.210938 8.847656 3.023438 12.058593-.421875 11.261719-12.148437 27.078125-19.054687 43.640625-19.054687 16.566406 0 32.378906 6.90625 43.640625 19.054687 1.613281 1.730469 3.878907 2.714844 6.246094 2.710938zm0 0"/><path d="m278.171875 98.648438c1.585937 2.375 4.25 3.800781 7.109375 3.796874 1.679688 0 3.320312-.496093 4.71875-1.433593 3.921875-2.613281 4.984375-7.914063 2.371094-11.835938-8.152344-12.289062-21.613282-20.019531-36.335938-20.863281-14.71875.84375-28.183594 8.574219-36.335937 20.863281-2.613281 3.921875-1.554688 9.21875 2.363281 11.835938 3.921875 2.613281 9.222656 1.554687 11.835938-2.363281 5.027343-7.511719 13.144531-12.378907 22.136718-13.269532 8.992188.890625 17.113282 5.757813 22.136719 13.269532zm0 0"/><path d="m366.96875 238.976562c0 4.714844-3.820312 8.535157-8.53125 8.535157-4.714844 0-8.535156-3.820313-8.535156-8.535157 0-4.710937 3.820312-8.53125 8.535156-8.53125 4.710938 0 8.53125 3.820313 8.53125 8.53125zm0 0"/><path d="m401.101562 273.109375c0 4.714844-3.820312 8.535156-8.53125 8.535156-4.714843 0-8.535156-3.820312-8.535156-8.535156 0-4.710937 3.820313-8.53125 8.535156-8.53125 4.710938 0 8.53125 3.820313 8.53125 8.53125zm0 0"/><path d="m435.234375 238.976562c0 4.714844-3.820313 8.535157-8.53125 8.535157-4.714844 0-8.535156-3.820313-8.535156-8.535157 0-4.710937 3.820312-8.53125 8.535156-8.53125 4.710937 0 8.53125 3.820313 8.53125 8.53125zm0 0"/><path d="m401.101562 204.84375c0 4.714844-3.820312 8.535156-8.53125 8.535156-4.714843 0-8.535156-3.820312-8.535156-8.535156 0-4.710938 3.820313-8.53125 8.535156-8.53125 4.710938 0 8.53125 3.820312 8.53125 8.53125zm0 0"/></svg>
+                    </div>
+                    <div class="item-info">
+                      <h4 class="title uppercase">bottoms deluxe 5</h4>
+                      <p class="des acid-green-color uppercase" style="margin-bottom: 3px;">swordfish</p>
+                      <p class="des uppercase">Get it now!</p>
+                    </div>
+                  </div>
+                  <div class="hardware-item flex items-center">
+                    <div class="item-icon"><svg height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m476 112h-440a28.032 28.032 0 0 0 -28 28v232a28.032 28.032 0 0 0 28 28h440a28.032 28.032 0 0 0 28-28v-232a28.032 28.032 0 0 0 -28-28zm12 260a12.013 12.013 0 0 1 -12 12h-440a12.013 12.013 0 0 1 -12-12v-232a12.013 12.013 0 0 1 12-12h440a12.013 12.013 0 0 1 12 12z"/><path d="m376 328h-240a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8h240a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8zm-8 32h-224v-16h224z"/><path d="m104 328h-56a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8h56a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8zm-8 32h-40v-16h40z"/><path d="m464 328h-56a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8h56a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8zm-8 32h-40v-16h40z"/><path d="m464 264h-96a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8h96a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8zm-8 32h-80v-16h80z"/><path d="m48 312h32a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8h-32a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8zm8-32h16v16h-16z"/><path d="m152 304v-32a8 8 0 0 0 -8-8h-32a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8h32a8 8 0 0 0 8-8zm-16-8h-16v-16h16z"/><path d="m176 312h32a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8h-32a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8zm8-32h16v16h-16z"/><path d="m240 312h32a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8h-32a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8zm8-32h16v16h-16z"/><path d="m304 312h32a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8h-32a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8zm8-32h16v16h-16z"/><path d="m48 248h32a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8h-32a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8zm8-32h16v16h-16z"/><path d="m112 248h32a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8h-32a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8zm8-32h16v16h-16z"/><path d="m176 248h32a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8h-32a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8zm8-32h16v16h-16z"/><path d="m240 248h32a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8h-32a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8zm8-32h16v16h-16z"/><path d="m304 248h32a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8h-32a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8zm8-32h16v16h-16z"/><path d="m368 248h32a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8h-32a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8zm8-32h16v16h-16z"/><path d="m464 200h-32a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8h32a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8zm-8 32h-16v-16h16z"/><path d="m48 184h32a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8h-32a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8zm8-32h16v16h-16z"/><path d="m112 184h32a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8h-32a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8zm8-32h16v16h-16z"/><path d="m176 184h32a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8h-32a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8zm8-32h16v16h-16z"/><path d="m240 184h32a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8h-32a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8zm8-32h16v16h-16z"/><path d="m304 184h32a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8h-32a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8zm8-32h16v16h-16z"/><path d="m368 184h32a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8h-32a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8zm8-32h16v16h-16z"/><path d="m464 136h-32a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8h32a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8zm-8 32h-16v-16h16z"/></g></svg>
+                    </div>
+                    <div class="item-info">
+                      <h4 class="title uppercase">iron series GQ+</h4>
+                      <p class="des acid-green-color uppercase" style="margin-bottom: 3px;">gq solutions</p>
+                      <p class="des uppercase">Get it now!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="player-carousel-item">
+                <h3 class="name">Sarah stacy</h3>
+                <h1 class="title uppercase">Livestream</h1>
+                <div class="livestream-video"><iframe height="315" src="https://www.youtube.com/embed/edYCtaNueQY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="player-item flex">
+          <div class="player-overlay theme-red">
+            <div class="ncr-page-decor__layer-1"></div>
+            <div class="ncr-page-decor__layer-2"></div>
+            <div class="ncr-page-decor__layer-3"></div>
+            <div class="ncr-page-decor__layer-4"></div>
+            <div class="ncr-page-decor__layer-5"></div>
+          </div><img class="image-member" src="./assets/images/person-4.png" alt="">
+        </div>
+      </div>
+    </div><script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/magic-mouse.js"></script><script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

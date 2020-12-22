@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Necromancers</title>
+    <link rel="shortcut icon" type="image/x-icon" href="">
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+  </head>
+  <body>
+    <div class="loading" id="loading">
+      <div class="icon-loading">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="circle"></div>
+      </div>
+    </div>
+    <nav class="nav flex items-center">
+      <div class="nav-logo"><img src="./assets/images/logo.png" alt=""></div>
+      <div class="nav-lists flex items-center">
+        <div class="nav-list nav-level-1 flex items-center"><a href="home.html">home</a>
+        </div>
+        <div class="nav-list nav-level-1 flex items-center"><a href="#">teams</a>
+          <div class="list-plus icon-plus"><span></span><span></span></div>
+          <div class="nav-list-child">
+            <div class="nav-list flex items-center"><a href="team-section.html">team selections</a></div>
+            <div class="nav-list flex items-center"><a href="team-overview.html">team overview</a></div>
+            <div class="nav-list flex items-center"><a href="team-player-3.html">player page</a></div>
+          </div>
+        </div>
+        <div class="nav-list nav-level-1 flex items-center"><a href="#">matches</a>
+          <div class="list-plus icon-plus"><span></span><span></span></div>
+          <div class="nav-list-child">
+            <div class="nav-list flex items-center"><a href="match-score.html">match scores</a></div>
+            <div class="nav-list flex items-center"><a href="match-upcoming.html">upcoming matches</a></div>
+            <div class="nav-list flex items-center"><a href="#">standings</a></div>
+            <div class="nav-list flex items-center"><a href="#">match stats</a></div>
+            <div class="nav-list flex items-center"><a href="#">match lineups</a></div>
+            <div class="nav-list flex items-center"><a href="#">match overviews</a></div>
+            <div class="nav-list flex items-center"><a href="#">match replay</a></div>
+          </div>
+        </div>
+        <div class="nav-list nav-level-1 flex items-center"><a href="#">news</a>
+          <div class="list-plus icon-plus"><span></span><span></span></div>
+          <div class="nav-list-child">
+            <div class="nav-list flex items-center"><a href="news.html">news page</a></div>
+            <div class="nav-list flex items-center"><a href="blog-post.html">post page</a></div>
+          </div>
+        </div>
+        <div class="nav-list nav-level-1 flex items-center"><a href="#">features</a>
+        </div>
+        <div class="nav-list nav-level-1 flex items-center"><a href="#">shop</a>
+          <div class="list-plus icon-plus"><span></span><span></span></div>
+          <div class="nav-list-child">
+            <div class="nav-list flex items-center"><a href="shop.html">shop page</a></div>
+            <div class="nav-list flex items-center"><a href="#">product page</a></div>
+            <div class="nav-list flex items-center"><a href="#">checkout page</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center" style="position: relative; margin-left: auto;">   
+        <div class="nav-profile flex items-center">
+          <div class="avatar"><img src="./assets/images/avatar.jpg" alt=""></div>
+          <div class="profile-info">
+            <p class="des">Hello</p>
+            <h6 class="name">James Spiegel</h6>
+          </div>
+          <div class="account-setting"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve"><path d="M238.933,0C106.974,0,0,106.974,0,238.933s106.974,238.933,238.933,238.933s238.933-106.974,238.933-238.933 C477.726,107.033,370.834,0.141,238.933,0z M238.933,443.733c-113.108,0-204.8-91.692-204.8-204.8s91.692-204.8,204.8-204.8 s204.8,91.692,204.8,204.8C443.611,351.991,351.991,443.611,238.933,443.733z"/><circle cx="153.6" cy="204.8" r="34.133"/><circle cx="324.267" cy="204.8" r="34.133"/><path d="M304.287,296.61c-5.637-7.554-16.331-9.108-23.885-3.47c-0.327,0.244-0.644,0.499-0.953,0.766h0 c-24.135,17.628-56.898,17.628-81.033,0c-7.131-6.164-17.909-5.379-24.072,1.752c-6.164,7.131-5.379,17.909,1.752,24.072 c0.308,0.267,0.626,0.522,0.953,0.766c36.531,27.922,87.236,27.922,123.767,0C308.371,314.858,309.925,304.164,304.287,296.61z"/></svg></div>
+          <div class="log-out"><svg height="490pt" viewBox="0 -10 490.66667 490" width="490pt" xmlns="http://www.w3.org/2000/svg"><path d="m474.667969 251h-309.335938c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h309.335938c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/><path d="m250.667969 336.332031c-4.097657 0-8.191407-1.554687-11.308594-4.691406l-85.332031-85.332031c-6.25-6.253906-6.25-16.386719 0-22.636719l85.332031-85.332031c6.25-6.25 16.382813-6.25 22.636719 0 6.25 6.25 6.25 16.382812 0 22.632812l-74.027344 74.027344 74.027344 74.027344c6.25 6.25 6.25 16.382812 0 22.632812-3.136719 3.117188-7.234375 4.671875-11.328125 4.671875zm0 0"/><path d="m234.667969 469.667969c-129.386719 0-234.667969-105.28125-234.667969-234.667969s105.28125-234.667969 234.667969-234.667969c97.085937 0 182.804687 58.410157 218.410156 148.824219 3.242187 8.210938-.8125 17.492188-9.023437 20.753906-8.214844 3.203125-17.496094-.789062-20.757813-9.042968-30.742187-78.082032-104.789063-128.535157-188.628906-128.535157-111.746094 0-202.667969 90.925781-202.667969 202.667969s90.921875 202.667969 202.667969 202.667969c83.839843 0 157.886719-50.453125 188.628906-128.511719 3.242187-8.257812 12.523437-12.246094 20.757813-9.046875 8.210937 3.242187 12.265624 12.542969 9.023437 20.757813-35.605469 90.390624-121.324219 148.800781-218.410156 148.800781zm0 0"/></svg></div>
+        </div>
+        <div class="nav-pagination flex items-center">
+          <div class="pagination-item left"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+<path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"/>
+</svg>
+          </div>
+          <div class="pagination-item">01</div>
+          <div class="pagination-item">02</div>
+          <div class="pagination-item">...</div>
+          <div class="pagination-item">08</div>
+          <div class="pagination-item right"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve">
+<path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"/>
+</svg>
+          </div>
+        </div>
+        <div class="nav-action-group">
+          <div class="action-group flex items-center">
+            <div class="action-item like">
+              <div class="sub-action">
+                <div class="icon-plus"><span></span><span></span></div>
+              </div><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 478.2 478.2" style="enable-background:new 0 0 478.2 478.2;" xml:space="preserve"><path d="M457.575,325.1c9.8-12.5,14.5-25.9,13.9-39.7c-0.6-15.2-7.4-27.1-13-34.4c6.5-16.2,9-41.7-12.7-61.5 c-15.9-14.5-42.9-21-80.3-19.2c-26.3,1.2-48.3,6.1-49.2,6.3h-0.1c-5,0.9-10.3,2-15.7,3.2c-0.4-6.4,0.7-22.3,12.5-58.1 c14-42.6,13.2-75.2-2.6-97c-16.6-22.9-43.1-24.7-50.9-24.7c-7.5,0-14.4,3.1-19.3,8.8c-11.1,12.9-9.8,36.7-8.4,47.7 c-13.2,35.4-50.2,122.2-81.5,146.3c-0.6,0.4-1.1,0.9-1.6,1.4c-9.2,9.7-15.4,20.2-19.6,29.4c-5.9-3.2-12.6-5-19.8-5h-61 c-23,0-41.6,18.7-41.6,41.6v162.5c0,23,18.7,41.6,41.6,41.6h61c8.9,0,17.2-2.8,24-7.6l23.5,2.8c3.6,0.5,67.6,8.6,133.3,7.3 c11.9,0.9,23.1,1.4,33.5,1.4c17.9,0,33.5-1.4,46.5-4.2c30.6-6.5,51.5-19.5,62.1-38.6c8.1-14.6,8.1-29.1,6.8-38.3 c19.9-18,23.4-37.9,22.7-51.9C461.275,337.1,459.475,330.2,457.575,325.1z M48.275,447.3c-8.1,0-14.6-6.6-14.6-14.6V270.1 c0-8.1,6.6-14.6,14.6-14.6h61c8.1,0,14.6,6.6,14.6,14.6v162.5c0,8.1-6.6,14.6-14.6,14.6h-61V447.3z M431.975,313.4 c-4.2,4.4-5,11.1-1.8,16.3c0,0.1,4.1,7.1,4.6,16.7c0.7,13.1-5.6,24.7-18.8,34.6c-4.7,3.6-6.6,9.8-4.6,15.4c0,0.1,4.3,13.3-2.7,25.8 c-6.7,12-21.6,20.6-44.2,25.4c-18.1,3.9-42.7,4.6-72.9,2.2c-0.4,0-0.9,0-1.4,0c-64.3,1.4-129.3-7-130-7.1h-0.1l-10.1-1.2 c0.6-2.8,0.9-5.8,0.9-8.8V270.1c0-4.3-0.7-8.5-1.9-12.4c1.8-6.7,6.8-21.6,18.6-34.3c44.9-35.6,88.8-155.7,90.7-160.9 c0.8-2.1,1-4.4,0.6-6.7c-1.7-11.2-1.1-24.9,1.3-29c5.3,0.1,19.6,1.6,28.2,13.5c10.2,14.1,9.8,39.3-1.2,72.7 c-16.8,50.9-18.2,77.7-4.9,89.5c6.6,5.9,15.4,6.2,21.8,3.9c6.1-1.4,11.9-2.6,17.4-3.5c0.4-0.1,0.9-0.2,1.3-0.3 c30.7-6.7,85.7-10.8,104.8,6.6c16.2,14.8,4.7,34.4,3.4,36.5c-3.7,5.6-2.6,12.9,2.4,17.4c0.1,0.1,10.6,10,11.1,23.3 C444.875,295.3,440.675,304.4,431.975,313.4z"/></svg>
+            </div>
+            <div class="action-item cart">
+              <div class="sub-action cart-number">4</div><svg height="512pt" viewBox="-35 0 512 512.00102" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m443.054688 495.171875-38.914063-370.574219c-.816406-7.757812-7.355469-13.648437-15.15625-13.648437h-73.140625v-16.675781c0-51.980469-42.292969-94.273438-94.273438-94.273438-51.984374 0-94.277343 42.292969-94.277343 94.273438v16.675781h-73.140625c-7.800782 0-14.339844 5.890625-15.15625 13.648437l-38.9140628 370.574219c-.4492192 4.292969.9453128 8.578125 3.8320308 11.789063 2.890626 3.207031 7.007813 5.039062 11.324219 5.039062h412.65625c4.320313 0 8.4375-1.832031 11.324219-5.039062 2.894531-3.210938 4.285156-7.496094 3.835938-11.789063zm-285.285157-400.898437c0-35.175782 28.621094-63.796876 63.800781-63.796876 35.175782 0 63.796876 28.621094 63.796876 63.796876v16.675781h-127.597657zm-125.609375 387.25 35.714844-340.097657h59.417969v33.582031c0 8.414063 6.824219 15.238282 15.238281 15.238282s15.238281-6.824219 15.238281-15.238282v-33.582031h127.597657v33.582031c0 8.414063 6.824218 15.238282 15.238281 15.238282 8.414062 0 15.238281-6.824219 15.238281-15.238282v-33.582031h59.417969l35.714843 340.097657zm0 0"/></svg>
+            </div>
+            <div class="action-item search"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path d="M225.474,0C101.151,0,0,101.151,0,225.474c0,124.33,101.151,225.474,225.474,225.474 c124.33,0,225.474-101.144,225.474-225.474C450.948,101.151,349.804,0,225.474,0z M225.474,409.323 c-101.373,0-183.848-82.475-183.848-183.848S124.101,41.626,225.474,41.626s183.848,82.475,183.848,183.848 S326.847,409.323,225.474,409.323z"/><path d="M505.902,476.472L386.574,357.144c-8.131-8.131-21.299-8.131-29.43,0c-8.131,8.124-8.131,21.306,0,29.43l119.328,119.328 c4.065,4.065,9.387,6.098,14.715,6.098c5.321,0,10.649-2.033,14.715-6.098C514.033,497.778,514.033,484.596,505.902,476.472z"/></svg></div>
+          </div>
+        </div>
+        <div class="nav-open-menu"><span></span><span></span><span></span></div>
+      </div>
+    </nav>
+    <nav class="nav-mobile">
+      <div class="nav-header flex">
+        <div class="header-info flex">
+          <div class="info-wrap">
+            <p>Competitions</p>
+            <h6 class="flex items-center justify-between">All competitions
+              <div class="icon-plus"><span></span><span></span></div>
+            </h6>
+          </div>
+        </div>
+        <div class="header-match">     
+          <div class="owl-carousel owl-theme match-carousel">
+            <div class="item">
+              <div class="match-item flex flex-col justify-center">
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-1.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">NCR</h3>
+                      <h4 class="country">USA</h4>
+                    </div>
+                  </div>
+                  <div class="score">2<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 292.4 292.4" style="enable-background:new 0 0 292.4 292.4;" xml:space="preserve"><path d="M69.4,159l127.9,127.9c3.6,3.6,7.9,5.4,12.8,5.4c5,0,9.2-1.8,12.9-5.4c3.6-3.6,5.4-7.9,5.4-12.8V18.3 c0-4.9-1.8-9.2-5.4-12.8c-3.6-3.6-7.9-5.4-12.9-5.4c-4.9,0-9.2,1.8-12.8,5.4L69.4,133.3c-3.6,3.6-5.4,7.9-5.4,12.8 C64,151.1,65.8,155.4,69.4,159z"/></svg>
+                  </div>
+                  <div class="info">25:42<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"/></svg>
+                  </div>
+                </div>
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-2.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">RRH</h3>
+                      <h4 class="country">JPN</h4>
+                    </div>
+                  </div>
+                  <div class="score">1
+                  </div>
+                  <div class="info">01/12</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="match-item flex flex-col justify-center">
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-3.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">FEG</h3>
+                      <h4 class="country">FRA</h4>
+                    </div>
+                  </div>
+                  <div class="score">4<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 292.4 292.4" style="enable-background:new 0 0 292.4 292.4;" xml:space="preserve"><path d="M69.4,159l127.9,127.9c3.6,3.6,7.9,5.4,12.8,5.4c5,0,9.2-1.8,12.9-5.4c3.6-3.6,5.4-7.9,5.4-12.8V18.3 c0-4.9-1.8-9.2-5.4-12.8c-3.6-3.6-7.9-5.4-12.9-5.4c-4.9,0-9.2,1.8-12.8,5.4L69.4,133.3c-3.6,3.6-5.4,7.9-5.4,12.8 C64,151.1,65.8,155.4,69.4,159z"/></svg>
+                  </div>
+                  <div class="info">Final
+                  </div>
+                </div>
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-4.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">NCR</h3>
+                      <h4 class="country">USA</h4>
+                    </div>
+                  </div>
+                  <div class="score">3
+                  </div>
+                  <div class="info">01/09</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="match-item flex flex-col justify-center">
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-5.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">NCR</h3>
+                      <h4 class="country">USA</h4>
+                    </div>
+                  </div>
+                  <div class="score">1
+                  </div>
+                  <div class="info">Final
+                  </div>
+                </div>
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-1.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">AGB</h3>
+                      <h4 class="country">SPA</h4>
+                    </div>
+                  </div>
+                  <div class="score">3<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 292.4 292.4" style="enable-background:new 0 0 292.4 292.4;" xml:space="preserve"><path d="M69.4,159l127.9,127.9c3.6,3.6,7.9,5.4,12.8,5.4c5,0,9.2-1.8,12.9-5.4c3.6-3.6,5.4-7.9,5.4-12.8V18.3 c0-4.9-1.8-9.2-5.4-12.8c-3.6-3.6-7.9-5.4-12.9-5.4c-4.9,0-9.2,1.8-12.8,5.4L69.4,133.3c-3.6,3.6-5.4,7.9-5.4,12.8 C64,151.1,65.8,155.4,69.4,159z"/></svg>
+                  </div>
+                  <div class="info">01/05</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="match-item flex flex-col justify-center">
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-2.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">ICP</h3>
+                      <h4 class="country">USA</h4>
+                    </div>
+                  </div>
+                  <div class="score">0
+                  </div>
+                  <div class="info">Final
+                  </div>
+                </div>
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-3.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">NCR</h3>
+                      <h4 class="country">USA</h4>
+                    </div>
+                  </div>
+                  <div class="score">5<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 292.4 292.4" style="enable-background:new 0 0 292.4 292.4;" xml:space="preserve"><path d="M69.4,159l127.9,127.9c3.6,3.6,7.9,5.4,12.8,5.4c5,0,9.2-1.8,12.9-5.4c3.6-3.6,5.4-7.9,5.4-12.8V18.3 c0-4.9-1.8-9.2-5.4-12.8c-3.6-3.6-7.9-5.4-12.9-5.4c-4.9,0-9.2,1.8-12.8,5.4L69.4,133.3c-3.6,3.6-5.4,7.9-5.4,12.8 C64,151.1,65.8,155.4,69.4,159z"/></svg>
+                  </div>
+                  <div class="info">01/02</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-body flex">
+        <div class="nav-lists flex flex-col items-start">
+          <div class="nav-list flex items-center nav-level-1"><a href="home.html">home</a>
+          </div>
+          <div class="nav-list flex items-center nav-level-1"><a href="#">teams</a>
+            <div class="list-plus icon-plus"><span></span><span></span></div>
+            <div class="nav-list-child">
+              <div class="nav-list flex items-center back">
+                <div class="flex items-center"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve"><path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"/></svg><a href="#">Back</a></div>
+              </div>
+              <div class="nav-list flex items-center"><a href="team-section.html">team selections</a></div>
+              <div class="nav-list flex items-center"><a href="team-overview.html">team overview</a></div>
+              <div class="nav-list flex items-center"><a href="team-player-3.html">player page</a></div>
+            </div>
+          </div>
+          <div class="nav-list flex items-center nav-level-1"><a href="#">matches</a>
+            <div class="list-plus icon-plus"><span></span><span></span></div>
+            <div class="nav-list-child">
+              <div class="nav-list flex items-center back">
+                <div class="flex items-center"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve"><path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"/></svg><a href="#">Back</a></div>
+              </div>
+              <div class="nav-list flex items-center"><a href="match-score.html">match scores</a></div>
+              <div class="nav-list flex items-center"><a href="match-upcoming.html">upcoming matches</a></div>
+              <div class="nav-list flex items-center"><a href="#">standings</a></div>
+              <div class="nav-list flex items-center"><a href="#">match stats</a></div>
+              <div class="nav-list flex items-center"><a href="#">match lineups</a></div>
+              <div class="nav-list flex items-center"><a href="#">match overviews</a></div>
+              <div class="nav-list flex items-center"><a href="#">match replay</a></div>
+            </div>
+          </div>
+          <div class="nav-list flex items-center nav-level-1"><a href="#">news</a>
+            <div class="list-plus icon-plus"><span></span><span></span></div>
+            <div class="nav-list-child">
+              <div class="nav-list flex items-center back">
+                <div class="flex items-center"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve"><path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"/></svg><a href="#">Back</a></div>
+              </div>
+              <div class="nav-list flex items-center"><a href="news.html">news page</a></div>
+              <div class="nav-list flex items-center"><a href="blog-post.html">post page</a></div>
+            </div>
+          </div>
+          <div class="nav-list flex items-center nav-level-1"><a href="#">features</a>
+          </div>
+          <div class="nav-list flex items-center nav-level-1"><a href="#">shop</a>
+            <div class="list-plus icon-plus"><span></span><span></span></div>
+            <div class="nav-list-child">
+              <div class="nav-list flex items-center back">
+                <div class="flex items-center"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve"><path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"/></svg><a href="#">Back</a></div>
+              </div>
+              <div class="nav-list flex items-center"><a href="shop.html">shop page</a></div>
+              <div class="nav-list flex items-center"><a href="#">product page</a></div>
+              <div class="nav-list flex items-center"><a href="#">checkout page</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-info">
+          <div class="info-team flex justify-between">
+            <div class="info-team-item">
+              <h5 class="title">Join our team</h5>
+              <p>We’re always looking for new talent to join our teams. If you wanna join us, just send us and email and we’ll get back to you!</p><span>Max Parker - Recruiter</span><a href="#">mp-recruit<span class="acid-green-color">@</span>necromancers.com</a><span>Be our partner!</span><a href="#">partners<span class="acid-green-color">@</span>necromancers.com</a>
+            </div>
+            <div class="info-team-item">
+              <h5 class="title">Contact</h5>
+              <p>If you have any questions, just send us and email and don’t forget to follow and like all our social accounts to keep updated!</p><span>General inquiries</span><a href="#">inquiries<span class="acid-green-color">@</span>necromancers.com</a>
+            </div>
+          </div>
+          <div class="info-partner">
+            <h5 class="title">Our partners</h5>
+            <div class="owl-carousel owl-theme partner-carousel">
+              <div class="item partner-item"><img src="./assets/images/partner-1.png" alt=""></div>
+              <div class="item partner-item"><img src="./assets/images/partner-2.png" alt=""></div>
+              <div class="item partner-item"><img src="./assets/images/partner-3.png" alt=""></div>
+              <div class="item partner-item"><img src="./assets/images/partner-2.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="section home-page flex" id="scroll-main">
+      <div class="banner-overview">
+        <div class="owl-carousel owl-theme overview-carousel">
+          <div class="item">
+            <div class="overview-item">
+              <div class="overview-background"><img src="./assets/images/bg-person-1.jpg" alt=""></div>
+              <div class="overview-info">
+                <h3 class="white-color title">Welcome</h3>
+                <h2 class="name acid-green-color">Julie_noire</h2>
+                <p class="des white-color">To the<span class="acid-green-color">xenovrese</span>team!</p>
+              </div>
+              <div class="overview-person"><img src="./assets/images/person-1.png" alt=""></div>
+              <div class="overview-more flex items-center">
+                <div class="more-icon flex items-center justify-center">
+                  <div class="icon-plus"><span></span><span></span></div>
+                </div><a href="team-player-3.html">More info</a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="overview-item">
+              <div class="overview-background"><img src="./assets/images/bg-person-2.jpg" alt=""></div>
+              <div class="overview-info">
+                <h3 class="white-color title">Congratulations!</h3>
+                <h2 class="name white-color">Crazzzy_80</h2>
+                <p class="des acid-green-color">Reached 10k twitch subs</p>
+              </div>
+              <div class="overview-person"><img src="./assets/images/person-2.png" alt=""></div>
+              <div class="overview-more flex items-center">
+                <div class="more-icon flex items-center justify-center">
+                  <div class="icon-plus"><span></span><span></span></div>
+                </div><a href="team-player-4.html">More info</a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="overview-item">
+              <div class="overview-background"><img src="./assets/images/bg-person-3.jpg" alt=""></div>
+              <div class="overview-info">
+                <h3 class="white-color title">Featured player!</h3>
+                <h2 class="name goldenrod-color">G-Huntress</h2>
+                <div class="match-overview flex items-center justify-center">
+                  <div class="match-overview-item">
+                    <div class="number">28</div>
+                    <p>Games</p>
+                  </div>
+                  <div class="match-overview-item">
+                    <div class="number">73</div>
+                    <p>Kills</p>
+                  </div>
+                  <div class="match-overview-item">
+                    <div class="number">95</div>
+                    <p>Win %</p>
+                  </div>
+                </div>
+              </div>
+              <div class="overview-person"><img src="./assets/images/person-3.png" alt=""></div>
+              <div class="overview-more flex items-center">
+                <div class="more-icon flex">
+                  <div class="icon-plus"><span></span><span></span></div>
+                </div><a href="team-player-2.html">More info</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="post-overview flex">
+        <div class="post-group">
+          <div class="post-item flex">
+            <div class="post-info flex flex-col justify-center">
+              <h4 class="des .goldenrod-color">Gaming</h4><a class="title" href="blog-post.html">League of heroes presented a new character</a>
+              <div class="date">August 15th, 2018</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit mollitia modi, tempore, pariatur, error quaerat dolorum laborum, commodi laudantium soluta sit reiciendis praesentium dolore cumque ab.</p>
+            </div>
+            <div class="post-image"><img src="./assets/images/news-post-1.jpg" alt=""></div>
+          </div>
+          <div class="post-item flex">
+            <div class="post-info flex flex-col justify-center">
+              <h4 class="des .acid-green-color">Esports</h4><a class="title" href="blog-post.html">The Necromancers emerge victorious once more!</a>
+              <div class="date">August 14th, 2018</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit mollitia modi, tempore, pariatur, error quaerat dolorum laborum, commodi laudantium soluta sit reiciendis praesentium dolore cumque ab.</p>
+            </div>
+            <div class="post-image"><img src="./assets/images/news-post-2.jpg" alt=""></div>
+          </div>
+        </div>
+        <div class="post-group">
+          <div class="post-item flex">
+            <div class="post-info flex flex-col justify-center">
+              <h4 class="des .acid-green-color">Esports</h4><a class="title" href="blog-post.html">Matt Rodgers talks about becoming a pro gamer</a>
+              <div class="date">August 10th, 2018</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit mollitia modi, tempore, pariatur, error quaerat dolorum laborum, commodi laudantium soluta sit reiciendis praesentium dolore cumque ab.</p>
+            </div>
+            <div class="post-image"><img src="./assets/images/news-post-3.jpg" alt=""></div>
+          </div>
+          <div class="post-item flex">
+            <div class="post-info flex flex-col justify-center">
+              <h4 class="des .goldenrod-color">Gaming</h4><a class="title" href="blog-post.html">Magimons will have a new class: Pyromancer</a>
+              <div class="date">August 10th, 2018</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit mollitia modi, tempore, pariatur, error quaerat dolorum laborum, commodi laudantium soluta sit reiciendis praesentium dolore cumque ab.</p>
+            </div>
+            <div class="post-image"><img src="./assets/images/news-post-4.jpg" alt=""></div>
+          </div>
+        </div>
+        <div class="post-group">
+          <div class="post-item flex">
+            <div class="post-info flex flex-col justify-center">
+              <h4 class="des .red-pink-color">Videos</h4><a class="title" href="blog-post.html">Jack shows a sneak peak of the new loh expansion</a>
+              <div class="date">August 3rd, 2018</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit mollitia modi, tempore, pariatur, error quaerat dolorum laborum, commodi laudantium soluta sit reiciendis praesentium dolore cumque ab.</p>
+            </div>
+            <div class="post-image"><img src="./assets/images/news-post-5.jpg" alt=""></div>
+          </div>
+          <div class="post-item flex">
+            <div class="post-info flex flex-col justify-center">
+              <h4 class="des .acid-green-color">Esports</h4><a class="title" href="blog-post.html">The team tested the new vr pod at 2018 gamexcon</a>
+              <div class="date">July 24th, 2018</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit mollitia modi, tempore, pariatur, error quaerat dolorum laborum, commodi laudantium soluta sit reiciendis praesentium dolore cumque ab.</p>
+            </div>
+            <div class="post-image"><img src="./assets/images/news-post-6.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </section><script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/magic-mouse.js"></script><script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

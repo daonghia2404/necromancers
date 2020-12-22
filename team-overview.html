@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Necromancers</title>
+    <link rel="shortcut icon" type="image/x-icon" href="">
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+  </head>
+  <body>
+    <div class="loading" id="loading">
+      <div class="icon-loading">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="circle"></div>
+      </div>
+    </div>
+    <nav class="nav flex items-center">
+      <div class="nav-logo"><img src="./assets/images/logo.png" alt=""></div>
+      <div class="nav-lists flex items-center">
+        <div class="nav-list nav-level-1 flex items-center"><a href="home.html">home</a>
+        </div>
+        <div class="nav-list nav-level-1 flex items-center"><a href="#">teams</a>
+          <div class="list-plus icon-plus"><span></span><span></span></div>
+          <div class="nav-list-child">
+            <div class="nav-list flex items-center"><a href="team-section.html">team selections</a></div>
+            <div class="nav-list flex items-center"><a href="team-overview.html">team overview</a></div>
+            <div class="nav-list flex items-center"><a href="team-player-3.html">player page</a></div>
+          </div>
+        </div>
+        <div class="nav-list nav-level-1 flex items-center"><a href="#">matches</a>
+          <div class="list-plus icon-plus"><span></span><span></span></div>
+          <div class="nav-list-child">
+            <div class="nav-list flex items-center"><a href="match-score.html">match scores</a></div>
+            <div class="nav-list flex items-center"><a href="match-upcoming.html">upcoming matches</a></div>
+            <div class="nav-list flex items-center"><a href="#">standings</a></div>
+            <div class="nav-list flex items-center"><a href="#">match stats</a></div>
+            <div class="nav-list flex items-center"><a href="#">match lineups</a></div>
+            <div class="nav-list flex items-center"><a href="#">match overviews</a></div>
+            <div class="nav-list flex items-center"><a href="#">match replay</a></div>
+          </div>
+        </div>
+        <div class="nav-list nav-level-1 flex items-center"><a href="#">news</a>
+          <div class="list-plus icon-plus"><span></span><span></span></div>
+          <div class="nav-list-child">
+            <div class="nav-list flex items-center"><a href="news.html">news page</a></div>
+            <div class="nav-list flex items-center"><a href="blog-post.html">post page</a></div>
+          </div>
+        </div>
+        <div class="nav-list nav-level-1 flex items-center"><a href="#">features</a>
+        </div>
+        <div class="nav-list nav-level-1 flex items-center"><a href="#">shop</a>
+          <div class="list-plus icon-plus"><span></span><span></span></div>
+          <div class="nav-list-child">
+            <div class="nav-list flex items-center"><a href="shop.html">shop page</a></div>
+            <div class="nav-list flex items-center"><a href="#">product page</a></div>
+            <div class="nav-list flex items-center"><a href="#">checkout page</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center" style="position: relative; margin-left: auto;">   
+        <div class="nav-profile flex items-center">
+          <div class="avatar"><img src="./assets/images/avatar.jpg" alt=""></div>
+          <div class="profile-info">
+            <p class="des">Hello</p>
+            <h6 class="name">James Spiegel</h6>
+          </div>
+          <div class="account-setting"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve"><path d="M238.933,0C106.974,0,0,106.974,0,238.933s106.974,238.933,238.933,238.933s238.933-106.974,238.933-238.933 C477.726,107.033,370.834,0.141,238.933,0z M238.933,443.733c-113.108,0-204.8-91.692-204.8-204.8s91.692-204.8,204.8-204.8 s204.8,91.692,204.8,204.8C443.611,351.991,351.991,443.611,238.933,443.733z"/><circle cx="153.6" cy="204.8" r="34.133"/><circle cx="324.267" cy="204.8" r="34.133"/><path d="M304.287,296.61c-5.637-7.554-16.331-9.108-23.885-3.47c-0.327,0.244-0.644,0.499-0.953,0.766h0 c-24.135,17.628-56.898,17.628-81.033,0c-7.131-6.164-17.909-5.379-24.072,1.752c-6.164,7.131-5.379,17.909,1.752,24.072 c0.308,0.267,0.626,0.522,0.953,0.766c36.531,27.922,87.236,27.922,123.767,0C308.371,314.858,309.925,304.164,304.287,296.61z"/></svg></div>
+          <div class="log-out"><svg height="490pt" viewBox="0 -10 490.66667 490" width="490pt" xmlns="http://www.w3.org/2000/svg"><path d="m474.667969 251h-309.335938c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h309.335938c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/><path d="m250.667969 336.332031c-4.097657 0-8.191407-1.554687-11.308594-4.691406l-85.332031-85.332031c-6.25-6.253906-6.25-16.386719 0-22.636719l85.332031-85.332031c6.25-6.25 16.382813-6.25 22.636719 0 6.25 6.25 6.25 16.382812 0 22.632812l-74.027344 74.027344 74.027344 74.027344c6.25 6.25 6.25 16.382812 0 22.632812-3.136719 3.117188-7.234375 4.671875-11.328125 4.671875zm0 0"/><path d="m234.667969 469.667969c-129.386719 0-234.667969-105.28125-234.667969-234.667969s105.28125-234.667969 234.667969-234.667969c97.085937 0 182.804687 58.410157 218.410156 148.824219 3.242187 8.210938-.8125 17.492188-9.023437 20.753906-8.214844 3.203125-17.496094-.789062-20.757813-9.042968-30.742187-78.082032-104.789063-128.535157-188.628906-128.535157-111.746094 0-202.667969 90.925781-202.667969 202.667969s90.921875 202.667969 202.667969 202.667969c83.839843 0 157.886719-50.453125 188.628906-128.511719 3.242187-8.257812 12.523437-12.246094 20.757813-9.046875 8.210937 3.242187 12.265624 12.542969 9.023437 20.757813-35.605469 90.390624-121.324219 148.800781-218.410156 148.800781zm0 0"/></svg></div>
+        </div>
+        <div class="nav-pagination flex items-center">
+          <div class="pagination-item left"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+<path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"/>
+</svg>
+          </div>
+          <div class="pagination-item">01</div>
+          <div class="pagination-item">02</div>
+          <div class="pagination-item">...</div>
+          <div class="pagination-item">08</div>
+          <div class="pagination-item right"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve">
+<path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"/>
+</svg>
+          </div>
+        </div>
+        <div class="nav-action-group">
+          <div class="action-group flex items-center">
+            <div class="action-item like">
+              <div class="sub-action">
+                <div class="icon-plus"><span></span><span></span></div>
+              </div><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 478.2 478.2" style="enable-background:new 0 0 478.2 478.2;" xml:space="preserve"><path d="M457.575,325.1c9.8-12.5,14.5-25.9,13.9-39.7c-0.6-15.2-7.4-27.1-13-34.4c6.5-16.2,9-41.7-12.7-61.5 c-15.9-14.5-42.9-21-80.3-19.2c-26.3,1.2-48.3,6.1-49.2,6.3h-0.1c-5,0.9-10.3,2-15.7,3.2c-0.4-6.4,0.7-22.3,12.5-58.1 c14-42.6,13.2-75.2-2.6-97c-16.6-22.9-43.1-24.7-50.9-24.7c-7.5,0-14.4,3.1-19.3,8.8c-11.1,12.9-9.8,36.7-8.4,47.7 c-13.2,35.4-50.2,122.2-81.5,146.3c-0.6,0.4-1.1,0.9-1.6,1.4c-9.2,9.7-15.4,20.2-19.6,29.4c-5.9-3.2-12.6-5-19.8-5h-61 c-23,0-41.6,18.7-41.6,41.6v162.5c0,23,18.7,41.6,41.6,41.6h61c8.9,0,17.2-2.8,24-7.6l23.5,2.8c3.6,0.5,67.6,8.6,133.3,7.3 c11.9,0.9,23.1,1.4,33.5,1.4c17.9,0,33.5-1.4,46.5-4.2c30.6-6.5,51.5-19.5,62.1-38.6c8.1-14.6,8.1-29.1,6.8-38.3 c19.9-18,23.4-37.9,22.7-51.9C461.275,337.1,459.475,330.2,457.575,325.1z M48.275,447.3c-8.1,0-14.6-6.6-14.6-14.6V270.1 c0-8.1,6.6-14.6,14.6-14.6h61c8.1,0,14.6,6.6,14.6,14.6v162.5c0,8.1-6.6,14.6-14.6,14.6h-61V447.3z M431.975,313.4 c-4.2,4.4-5,11.1-1.8,16.3c0,0.1,4.1,7.1,4.6,16.7c0.7,13.1-5.6,24.7-18.8,34.6c-4.7,3.6-6.6,9.8-4.6,15.4c0,0.1,4.3,13.3-2.7,25.8 c-6.7,12-21.6,20.6-44.2,25.4c-18.1,3.9-42.7,4.6-72.9,2.2c-0.4,0-0.9,0-1.4,0c-64.3,1.4-129.3-7-130-7.1h-0.1l-10.1-1.2 c0.6-2.8,0.9-5.8,0.9-8.8V270.1c0-4.3-0.7-8.5-1.9-12.4c1.8-6.7,6.8-21.6,18.6-34.3c44.9-35.6,88.8-155.7,90.7-160.9 c0.8-2.1,1-4.4,0.6-6.7c-1.7-11.2-1.1-24.9,1.3-29c5.3,0.1,19.6,1.6,28.2,13.5c10.2,14.1,9.8,39.3-1.2,72.7 c-16.8,50.9-18.2,77.7-4.9,89.5c6.6,5.9,15.4,6.2,21.8,3.9c6.1-1.4,11.9-2.6,17.4-3.5c0.4-0.1,0.9-0.2,1.3-0.3 c30.7-6.7,85.7-10.8,104.8,6.6c16.2,14.8,4.7,34.4,3.4,36.5c-3.7,5.6-2.6,12.9,2.4,17.4c0.1,0.1,10.6,10,11.1,23.3 C444.875,295.3,440.675,304.4,431.975,313.4z"/></svg>
+            </div>
+            <div class="action-item cart">
+              <div class="sub-action cart-number">4</div><svg height="512pt" viewBox="-35 0 512 512.00102" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m443.054688 495.171875-38.914063-370.574219c-.816406-7.757812-7.355469-13.648437-15.15625-13.648437h-73.140625v-16.675781c0-51.980469-42.292969-94.273438-94.273438-94.273438-51.984374 0-94.277343 42.292969-94.277343 94.273438v16.675781h-73.140625c-7.800782 0-14.339844 5.890625-15.15625 13.648437l-38.9140628 370.574219c-.4492192 4.292969.9453128 8.578125 3.8320308 11.789063 2.890626 3.207031 7.007813 5.039062 11.324219 5.039062h412.65625c4.320313 0 8.4375-1.832031 11.324219-5.039062 2.894531-3.210938 4.285156-7.496094 3.835938-11.789063zm-285.285157-400.898437c0-35.175782 28.621094-63.796876 63.800781-63.796876 35.175782 0 63.796876 28.621094 63.796876 63.796876v16.675781h-127.597657zm-125.609375 387.25 35.714844-340.097657h59.417969v33.582031c0 8.414063 6.824219 15.238282 15.238281 15.238282s15.238281-6.824219 15.238281-15.238282v-33.582031h127.597657v33.582031c0 8.414063 6.824218 15.238282 15.238281 15.238282 8.414062 0 15.238281-6.824219 15.238281-15.238282v-33.582031h59.417969l35.714843 340.097657zm0 0"/></svg>
+            </div>
+            <div class="action-item search"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path d="M225.474,0C101.151,0,0,101.151,0,225.474c0,124.33,101.151,225.474,225.474,225.474 c124.33,0,225.474-101.144,225.474-225.474C450.948,101.151,349.804,0,225.474,0z M225.474,409.323 c-101.373,0-183.848-82.475-183.848-183.848S124.101,41.626,225.474,41.626s183.848,82.475,183.848,183.848 S326.847,409.323,225.474,409.323z"/><path d="M505.902,476.472L386.574,357.144c-8.131-8.131-21.299-8.131-29.43,0c-8.131,8.124-8.131,21.306,0,29.43l119.328,119.328 c4.065,4.065,9.387,6.098,14.715,6.098c5.321,0,10.649-2.033,14.715-6.098C514.033,497.778,514.033,484.596,505.902,476.472z"/></svg></div>
+          </div>
+        </div>
+        <div class="nav-open-menu"><span></span><span></span><span></span></div>
+      </div>
+    </nav>
+    <nav class="nav-mobile">
+      <div class="nav-header flex">
+        <div class="header-info flex">
+          <div class="info-wrap">
+            <p>Competitions</p>
+            <h6 class="flex items-center justify-between">All competitions
+              <div class="icon-plus"><span></span><span></span></div>
+            </h6>
+          </div>
+        </div>
+        <div class="header-match">     
+          <div class="owl-carousel owl-theme match-carousel">
+            <div class="item">
+              <div class="match-item flex flex-col justify-center">
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-1.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">NCR</h3>
+                      <h4 class="country">USA</h4>
+                    </div>
+                  </div>
+                  <div class="score">2<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 292.4 292.4" style="enable-background:new 0 0 292.4 292.4;" xml:space="preserve"><path d="M69.4,159l127.9,127.9c3.6,3.6,7.9,5.4,12.8,5.4c5,0,9.2-1.8,12.9-5.4c3.6-3.6,5.4-7.9,5.4-12.8V18.3 c0-4.9-1.8-9.2-5.4-12.8c-3.6-3.6-7.9-5.4-12.9-5.4c-4.9,0-9.2,1.8-12.8,5.4L69.4,133.3c-3.6,3.6-5.4,7.9-5.4,12.8 C64,151.1,65.8,155.4,69.4,159z"/></svg>
+                  </div>
+                  <div class="info">25:42<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"/></svg>
+                  </div>
+                </div>
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-2.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">RRH</h3>
+                      <h4 class="country">JPN</h4>
+                    </div>
+                  </div>
+                  <div class="score">1
+                  </div>
+                  <div class="info">01/12</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="match-item flex flex-col justify-center">
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-3.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">FEG</h3>
+                      <h4 class="country">FRA</h4>
+                    </div>
+                  </div>
+                  <div class="score">4<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 292.4 292.4" style="enable-background:new 0 0 292.4 292.4;" xml:space="preserve"><path d="M69.4,159l127.9,127.9c3.6,3.6,7.9,5.4,12.8,5.4c5,0,9.2-1.8,12.9-5.4c3.6-3.6,5.4-7.9,5.4-12.8V18.3 c0-4.9-1.8-9.2-5.4-12.8c-3.6-3.6-7.9-5.4-12.9-5.4c-4.9,0-9.2,1.8-12.8,5.4L69.4,133.3c-3.6,3.6-5.4,7.9-5.4,12.8 C64,151.1,65.8,155.4,69.4,159z"/></svg>
+                  </div>
+                  <div class="info">Final
+                  </div>
+                </div>
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-4.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">NCR</h3>
+                      <h4 class="country">USA</h4>
+                    </div>
+                  </div>
+                  <div class="score">3
+                  </div>
+                  <div class="info">01/09</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="match-item flex flex-col justify-center">
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-5.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">NCR</h3>
+                      <h4 class="country">USA</h4>
+                    </div>
+                  </div>
+                  <div class="score">1
+                  </div>
+                  <div class="info">Final
+                  </div>
+                </div>
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-1.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">AGB</h3>
+                      <h4 class="country">SPA</h4>
+                    </div>
+                  </div>
+                  <div class="score">3<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 292.4 292.4" style="enable-background:new 0 0 292.4 292.4;" xml:space="preserve"><path d="M69.4,159l127.9,127.9c3.6,3.6,7.9,5.4,12.8,5.4c5,0,9.2-1.8,12.9-5.4c3.6-3.6,5.4-7.9,5.4-12.8V18.3 c0-4.9-1.8-9.2-5.4-12.8c-3.6-3.6-7.9-5.4-12.9-5.4c-4.9,0-9.2,1.8-12.8,5.4L69.4,133.3c-3.6,3.6-5.4,7.9-5.4,12.8 C64,151.1,65.8,155.4,69.4,159z"/></svg>
+                  </div>
+                  <div class="info">01/05</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="match-item flex flex-col justify-center">
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-2.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">ICP</h3>
+                      <h4 class="country">USA</h4>
+                    </div>
+                  </div>
+                  <div class="score">0
+                  </div>
+                  <div class="info">Final
+                  </div>
+                </div>
+                <div class="match-item-col flex items-center justify-between">
+                  <div class="team flex items-center">
+                    <div class="team-logo"><img src="./assets/images/logo-team-3.png" alt=""></div>
+                    <div class="team-info">
+                      <h3 class="name">NCR</h3>
+                      <h4 class="country">USA</h4>
+                    </div>
+                  </div>
+                  <div class="score">5<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 292.4 292.4" style="enable-background:new 0 0 292.4 292.4;" xml:space="preserve"><path d="M69.4,159l127.9,127.9c3.6,3.6,7.9,5.4,12.8,5.4c5,0,9.2-1.8,12.9-5.4c3.6-3.6,5.4-7.9,5.4-12.8V18.3 c0-4.9-1.8-9.2-5.4-12.8c-3.6-3.6-7.9-5.4-12.9-5.4c-4.9,0-9.2,1.8-12.8,5.4L69.4,133.3c-3.6,3.6-5.4,7.9-5.4,12.8 C64,151.1,65.8,155.4,69.4,159z"/></svg>
+                  </div>
+                  <div class="info">01/02</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-body flex">
+        <div class="nav-lists flex flex-col items-start">
+          <div class="nav-list flex items-center nav-level-1"><a href="home.html">home</a>
+          </div>
+          <div class="nav-list flex items-center nav-level-1"><a href="#">teams</a>
+            <div class="list-plus icon-plus"><span></span><span></span></div>
+            <div class="nav-list-child">
+              <div class="nav-list flex items-center back">
+                <div class="flex items-center"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve"><path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"/></svg><a href="#">Back</a></div>
+              </div>
+              <div class="nav-list flex items-center"><a href="team-section.html">team selections</a></div>
+              <div class="nav-list flex items-center"><a href="team-overview.html">team overview</a></div>
+              <div class="nav-list flex items-center"><a href="team-player-3.html">player page</a></div>
+            </div>
+          </div>
+          <div class="nav-list flex items-center nav-level-1"><a href="#">matches</a>
+            <div class="list-plus icon-plus"><span></span><span></span></div>
+            <div class="nav-list-child">
+              <div class="nav-list flex items-center back">
+                <div class="flex items-center"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve"><path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"/></svg><a href="#">Back</a></div>
+              </div>
+              <div class="nav-list flex items-center"><a href="match-score.html">match scores</a></div>
+              <div class="nav-list flex items-center"><a href="match-upcoming.html">upcoming matches</a></div>
+              <div class="nav-list flex items-center"><a href="#">standings</a></div>
+              <div class="nav-list flex items-center"><a href="#">match stats</a></div>
+              <div class="nav-list flex items-center"><a href="#">match lineups</a></div>
+              <div class="nav-list flex items-center"><a href="#">match overviews</a></div>
+              <div class="nav-list flex items-center"><a href="#">match replay</a></div>
+            </div>
+          </div>
+          <div class="nav-list flex items-center nav-level-1"><a href="#">news</a>
+            <div class="list-plus icon-plus"><span></span><span></span></div>
+            <div class="nav-list-child">
+              <div class="nav-list flex items-center back">
+                <div class="flex items-center"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve"><path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"/></svg><a href="#">Back</a></div>
+              </div>
+              <div class="nav-list flex items-center"><a href="news.html">news page</a></div>
+              <div class="nav-list flex items-center"><a href="blog-post.html">post page</a></div>
+            </div>
+          </div>
+          <div class="nav-list flex items-center nav-level-1"><a href="#">features</a>
+          </div>
+          <div class="nav-list flex items-center nav-level-1"><a href="#">shop</a>
+            <div class="list-plus icon-plus"><span></span><span></span></div>
+            <div class="nav-list-child">
+              <div class="nav-list flex items-center back">
+                <div class="flex items-center"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve"><path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"/></svg><a href="#">Back</a></div>
+              </div>
+              <div class="nav-list flex items-center"><a href="shop.html">shop page</a></div>
+              <div class="nav-list flex items-center"><a href="#">product page</a></div>
+              <div class="nav-list flex items-center"><a href="#">checkout page</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-info">
+          <div class="info-team flex justify-between">
+            <div class="info-team-item">
+              <h5 class="title">Join our team</h5>
+              <p>We’re always looking for new talent to join our teams. If you wanna join us, just send us and email and we’ll get back to you!</p><span>Max Parker - Recruiter</span><a href="#">mp-recruit<span class="acid-green-color">@</span>necromancers.com</a><span>Be our partner!</span><a href="#">partners<span class="acid-green-color">@</span>necromancers.com</a>
+            </div>
+            <div class="info-team-item">
+              <h5 class="title">Contact</h5>
+              <p>If you have any questions, just send us and email and don’t forget to follow and like all our social accounts to keep updated!</p><span>General inquiries</span><a href="#">inquiries<span class="acid-green-color">@</span>necromancers.com</a>
+            </div>
+          </div>
+          <div class="info-partner">
+            <h5 class="title">Our partners</h5>
+            <div class="owl-carousel owl-theme partner-carousel">
+              <div class="item partner-item"><img src="./assets/images/partner-1.png" alt=""></div>
+              <div class="item partner-item"><img src="./assets/images/partner-2.png" alt=""></div>
+              <div class="item partner-item"><img src="./assets/images/partner-3.png" alt=""></div>
+              <div class="item partner-item"><img src="./assets/images/partner-2.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="team-player flex items-center justify-center team-overview">
+      <div class="team-player-background"><img src="./assets/images/background-game-1.jpg" alt=""></div>
+      <div class="team-player-main flex items-center">
+        <div class="player-item flex items-center">
+          <div class="player-dots-carousel flex flex-col items-center justify-center">
+            <div class="dots-item active"><svg id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m481.854 119.657c-.28-5.394-3.44-10.221-8.271-12.636l-210.875-105.438c-4.223-2.111-9.193-2.111-13.416 0l-210.875 105.438c-4.831 2.415-7.991 7.242-8.271 12.636-.16 3.07-3.628 76.168 21.273 161.035 14.734 50.214 36.406 94.071 64.414 130.354 35.295 45.722 80.659 79.357 134.832 99.973 1.719.653 3.526.98 5.335.98s3.616-.327 5.335-.98c54.173-20.615 99.537-54.251 134.832-99.973 28.008-36.283 49.68-80.141 64.414-130.354 24.901-84.867 21.433-157.965 21.273-161.035zm-50.304 153.419c-30.538 103.343-89.584 173.231-175.55 207.816-85.966-34.585-145.013-104.473-175.55-207.816-18.868-63.854-20.604-121.982-20.516-143.272l196.066-98.034 196.065 98.032c.089 21.301-1.649 79.425-20.515 143.274z"/><path d="m412.927 143.775-150.22-75.109c-4.223-2.111-9.193-2.11-13.416 0l-150.218 75.109c-5.384 2.691-8.638 8.341-8.263 14.349 1.63 26.162 6.272 66.288 19.133 108.871 25.712 85.138 72.616 145.052 139.408 178.076 2.095 1.036 4.372 1.554 6.648 1.554s4.554-.518 6.648-1.554c66.792-33.024 113.696-92.938 139.408-178.076 12.859-42.579 17.503-82.706 19.134-108.87.376-6.008-2.878-11.659-8.262-14.35zm-39.589 114.546c-22.335 73.956-61.793 126.543-117.338 156.427-55.545-29.884-95.003-82.471-117.338-156.427-10.518-34.825-15.165-67.992-17.189-92.205l134.527-67.264 134.528 67.264c-2.026 24.215-6.674 57.383-17.19 92.205z"/></svg></div>
+            <div class="dots-item"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path d="M117.547,234.667H10.88c-5.888,0-10.667,4.779-10.667,10.667v256C0.213,507.221,4.992,512,10.88,512h106.667 c5.888,0,10.667-4.779,10.667-10.667v-256C128.213,239.445,123.456,234.667,117.547,234.667z"/><path d="M309.12,0H202.453c-5.888,0-10.667,4.779-10.667,10.667v490.667c0,5.888,4.779,10.667,10.667,10.667H309.12 c5.888,0,10.667-4.779,10.667-10.667V10.667C319.787,4.779,315.008,0,309.12,0z"/><path d="M501.12,106.667H394.453c-5.888,0-10.667,4.779-10.667,10.667v384c0,5.888,4.779,10.667,10.667,10.667H501.12 c5.888,0,10.667-4.779,10.667-10.667v-384C511.787,111.445,507.008,106.667,501.12,106.667z"/></svg></div>
+            <div class="dots-item"><svg xmlns="http://www.w3.org/2000/svg" height="512pt" version="1.1" viewBox="0 0 512.00099 512" width="512pt"><path d="M 497 36.953125 L 431.296875 36.953125 C 431.535156 29.675781 431.667969 22.355469 431.667969 15 C 431.667969 6.714844 424.949219 0 416.667969 0 L 95.332031 0 C 87.050781 0 80.332031 6.714844 80.332031 15 C 80.332031 22.355469 80.464844 29.675781 80.703125 36.953125 L 15 36.953125 C 6.714844 36.953125 0 43.667969 0 51.953125 C 0 119.164062 17.566406 182.574219 49.460938 230.507812 C 80.988281 277.894531 122.984375 305.074219 168.351562 307.71875 C 178.636719 318.910156 189.507812 328.035156 200.832031 334.996094 L 200.832031 401.664062 L 175.667969 401.664062 C 145.246094 401.664062 120.5 426.414062 120.5 456.832031 L 120.5 481.996094 L 119.433594 481.996094 C 111.148438 481.996094 104.433594 488.714844 104.433594 496.996094 C 104.433594 505.28125 111.148438 511.996094 119.433594 511.996094 L 392.566406 511.996094 C 400.851562 511.996094 407.566406 505.28125 407.566406 496.996094 C 407.566406 488.714844 400.851562 481.996094 392.566406 481.996094 L 391.5 481.996094 L 391.5 456.832031 C 391.5 426.414062 366.753906 401.664062 336.332031 401.664062 L 311.167969 401.664062 L 311.167969 334.996094 C 322.492188 328.039062 333.367188 318.910156 343.652344 307.71875 C 389.015625 305.074219 431.011719 277.894531 462.542969 230.507812 C 494.4375 182.574219 512 119.164062 512 51.953125 C 512 43.667969 505.285156 36.953125 497 36.953125 Z M 74.4375 213.890625 C 48.128906 174.355469 32.671875 122.644531 30.316406 66.953125 L 82.378906 66.953125 C 87.789062 135.414062 103.859375 198.695312 128.976562 248.925781 C 132.976562 256.925781 137.160156 264.484375 141.5 271.601562 C 116.550781 262.179688 93.460938 242.484375 74.4375 213.890625 Z M 361.5 456.832031 L 361.5 482 L 150.5 482 L 150.5 456.832031 C 150.5 442.957031 161.789062 431.664062 175.667969 431.664062 L 336.332031 431.664062 C 350.210938 431.664062 361.5 442.957031 361.5 456.832031 Z M 281.167969 401.664062 L 230.832031 401.664062 L 230.832031 348.03125 C 239.078125 350.203125 247.480469 351.332031 256 351.332031 C 264.519531 351.332031 272.921875 350.203125 281.167969 348.03125 Z M 290.457031 312.34375 C 289.78125 312.621094 289.132812 312.957031 288.511719 313.328125 C 277.910156 318.601562 267.015625 321.332031 256 321.332031 C 244.988281 321.332031 234.097656 318.601562 223.5 313.335938 C 222.871094 312.957031 222.21875 312.621094 221.535156 312.335938 C 209.773438 306.117188 198.394531 296.726562 187.632812 284.386719 C 187.066406 283.578125 186.429688 282.832031 185.722656 282.152344 C 175.039062 269.46875 164.988281 253.867188 155.808594 235.507812 C 128.242188 180.378906 112.320312 107.890625 110.507812 30 L 401.492188 30 C 399.675781 107.890625 383.753906 180.382812 356.191406 235.507812 C 347.011719 253.867188 336.960938 269.46875 326.28125 282.152344 C 325.570312 282.832031 324.925781 283.582031 324.363281 284.390625 C 313.601562 296.734375 302.21875 306.121094 290.457031 312.34375 Z M 437.5625 213.890625 C 418.539062 242.484375 395.449219 262.179688 370.5 271.601562 C 374.839844 264.484375 379.023438 256.925781 383.023438 248.925781 C 408.140625 198.695312 424.207031 135.414062 429.621094 66.953125 L 481.683594 66.953125 C 479.328125 122.644531 463.871094 174.355469 437.5625 213.890625 Z M 437.5625 213.890625 " style="stroke:none; fill-rule:nonzero; fill-opacity:1;"/></svg></div>
+            <div class="dots-item"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve"><path d="M443.86,196.919L141.46,10.514C119.582-2.955,93.131-3.515,70.702,9.016c-22.429,12.529-35.819,35.35-35.819,61.041 v371.112c0,38.846,31.3,70.619,69.77,70.829c0.105,0,0.21,0.001,0.313,0.001c12.022-0.001,24.55-3.769,36.251-10.909 c9.413-5.743,12.388-18.029,6.645-27.441c-5.743-9.414-18.031-12.388-27.441-6.645c-5.473,3.338-10.818,5.065-15.553,5.064 c-14.515-0.079-30.056-12.513-30.056-30.898V70.058c0-11.021,5.744-20.808,15.364-26.183c9.621-5.375,20.966-5.135,30.339,0.636 l302.401,186.405c9.089,5.596,14.29,14.927,14.268,25.601c-0.022,10.673-5.261,19.983-14.4,25.56L204.147,415.945 c-9.404,5.758-12.36,18.049-6.602,27.452c5.757,9.404,18.048,12.36,27.452,6.602l218.611-133.852 c20.931-12.769,33.457-35.029,33.507-59.55C477.165,232.079,464.729,209.767,443.86,196.919z"/></svg></div>
+          </div>
+          <div class="owl-carousel owl-theme player-carousel">
+            <div class="item">
+              <div class="player-carousel-item">
+                <h3 class="name uppercase">Necromanceres</h3>
+                <h1 class="title uppercase">Xenowatch</h1>
+                <div class="player-info-detail flex flex-wrap">
+                  <div class="info-item">
+                    <p class="des uppercase">country</p>
+                    <h4 class="title uppercase">united states</h4>
+                  </div>
+                  <div class="info-item">
+                    <p class="des uppercase">since</p>
+                    <h4 class="title uppercase">march 2012</h4>
+                  </div>
+                  <div class="info-item">
+                    <p class="des uppercase">prize earned</p>
+                    <h4 class="title uppercase">USD 125.360</h4>
+                  </div>
+                </div>
+                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus veritatis officia, voluptate reiciendis, laudantium ab iure rerum nam maxime molestias, quo assumenda dicta totam quos. Fuga, facere ex! Rerum, numquam!</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="player-carousel-item">
+                <h3 class="name uppercase">Necromanceres</h3>
+                <h1 class="title uppercase">Xenowatch</h1>
+                <div class="statistics-detail flex flex-wrap">
+                  <div class="statistics-item flex items-center">
+                    <div class="number">9.7</div>
+                    <div class="item-info">
+                      <p class="des uppercase">avg game</p>
+                      <h4 class="title uppercase">kills</h4>
+                    </div>
+                  </div>
+                  <div class="statistics-item flex items-center">
+                    <div class="number">6.1</div>
+                    <div class="item-info">
+                      <p class="des uppercase">avg game (k)</p>
+                      <h4 class="title uppercase">damage</h4>
+                    </div>
+                  </div>
+                  <div class="statistics-item flex items-center">
+                    <div class="number">4.2</div>
+                    <div class="item-info">
+                      <p class="des uppercase">avg game (k)</p>
+                      <h4 class="title uppercase">healing</h4>
+                    </div>
+                  </div>
+                  <div class="statistics-item flex items-center">
+                    <div class="number">131</div>
+                    <div class="item-info">
+                      <p class="des uppercase">games</p>
+                      <h4 class="title uppercase">won</h4>
+                    </div>
+                  </div>
+                  <div class="statistics-item flex items-center">
+                    <div class="number">25</div>
+                    <div class="item-info">
+                      <p class="des uppercase">games</p>
+                      <h4 class="title uppercase">lost</h4>
+                    </div>
+                  </div>
+                  <div class="statistics-item flex items-center">
+                    <div class="number">8.3</div>
+                    <div class="item-info">
+                      <p class="des uppercase">win ratio</p>
+                      <h4 class="title uppercase">83.9%</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="player-carousel-item">
+                <h3 class="name uppercase">Necromanceres</h3>
+                <h1 class="title uppercase">Xenowatch</h1>
+                <div class="reward-wrap">
+                  <div class="reward-item flex items-center">
+                    <div class="item-icon"><svg id="Capa_1" enable-background="new 0 0 512.001 512.001" height="512" viewBox="0 0 512.001 512.001" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m256 361c74.439 0 135-60.561 135-135s-60.56-135-135-135-135 60.561-135 135 60.561 135 135 135zm0-240c57.897 0 105 47.103 105 105s-47.103 105-105 105-105-47.103-105-105 47.104-105 105-105z"/><path d="m1.121 416.688c2.308 5.633 7.792 9.312 13.879 9.312h71v71c0 6.082 3.673 11.563 9.298 13.874 5.601 2.302 12.071 1.017 16.368-3.327l96.789-97.878 36.939 36.938c2.929 2.929 6.768 4.393 10.606 4.393 3.839 0 7.678-1.464 10.606-4.394l36.939-36.938 96.789 97.878c4.299 4.347 10.771 5.628 16.368 3.327 5.626-2.31 9.298-7.791 9.298-13.873v-71h71c6.087 0 11.571-3.679 13.88-9.312 2.308-5.633.983-12.103-3.354-16.375l-59.327-58.438c3.849-3.664 5.628-9.263 4.156-14.758l-14.001-52.258 38.253-38.254c5.858-5.858 5.858-15.355 0-21.213l-38.253-38.254 14.001-52.258c2.144-8.002-2.604-16.227-10.606-18.371l-52.258-13.999-14.002-52.257c-2.144-8.002-10.367-12.75-18.371-10.607l-52.149 13.973-38.244-39.106c-2.823-2.886-6.688-4.513-10.725-4.513-4.036 0-7.902 1.626-10.724 4.512l-38.244 39.106-52.149-13.973c-8.006-2.144-16.228 2.605-18.371 10.607l-14.002 52.258-52.257 14.002c-8.002 2.144-12.75 10.369-10.606 18.371l14.001 52.258-38.253 38.254c-5.858 5.858-5.858 15.355 0 21.213l38.253 38.254-14.001 52.258c-1.472 5.495.306 11.094 4.156 14.758l-59.329 58.436c-4.337 4.272-5.662 10.741-3.353 16.374zm409.879-20.688c-8.284 0-15 6.716-15 15v49.498l-37.406-37.826c7.514 1.231 14.882-3.414 16.894-10.924l14.002-52.257 26.603-7.128 44.303 43.637zm-343.786-170 33.771-33.771c3.79-3.79 5.27-9.313 3.882-14.489l-12.361-46.134 46.134-12.361c5.176-1.387 9.22-5.43 10.606-10.607l12.361-46.134 46.133 12.361c5.235 1.402 10.818-.127 14.606-4.001l33.654-34.41 33.653 34.412c3.788 3.874 9.37 5.403 14.606 4.001l46.133-12.361 12.361 46.134c1.387 5.177 5.43 9.22 10.606 10.607l46.134 12.361-12.361 46.134c-1.387 5.176.093 10.699 3.882 14.489l33.773 33.769-33.771 33.771c-3.79 3.79-5.27 9.313-3.882 14.489l12.361 46.134-46.134 12.361c-5.176 1.387-9.22 5.43-10.606 10.607l-12.361 46.134-46.133-12.361c-5.177-1.386-10.699.093-14.489 3.882l-33.772 33.77-33.771-33.771c-3.796-3.797-9.321-5.267-14.489-3.882l-46.133 12.361-12.361-46.134c-1.387-5.177-5.43-9.22-10.606-10.607l-46.134-12.361 12.361-46.134c1.387-5.176-.093-10.699-3.882-14.489zm28.692 126.363 26.603 7.128 14.002 52.257c2.012 7.51 9.379 12.155 16.894 10.924l-37.405 37.826v-49.498c0-8.284-6.716-15-15-15h-49.396z"/><path d="m208.711 246.918-6.026 35.132c-.965 5.627 1.348 11.315 5.967 14.671 4.62 3.356 10.743 3.799 15.797 1.142l31.551-16.588 31.551 16.587c5.073 2.668 11.197 2.2 15.797-1.142 4.619-3.356 6.933-9.043 5.967-14.671l-6.026-35.132 25.525-24.881c4.088-3.985 5.56-9.946 3.795-15.376-1.764-5.43-6.458-9.388-12.108-10.209l-35.275-5.126-15.775-31.964c-2.526-5.119-7.741-8.361-13.451-8.361-5.709 0-10.924 3.241-13.451 8.362l-15.775 31.964-35.275 5.126c-5.65.821-10.344 4.779-12.108 10.209-1.765 5.43-.293 11.391 3.795 15.376zm30.181-27.038c4.886-.71 9.109-3.778 11.294-8.206l5.814-11.78 5.814 11.781c2.185 4.427 6.409 7.496 11.294 8.206l13.001 1.889-9.408 9.17c-3.535 3.446-5.148 8.411-4.314 13.277l2.221 12.948-11.628-6.113c-4.37-2.298-9.591-2.297-13.96 0l-11.628 6.113 2.221-12.948c.834-4.866-.779-9.831-4.314-13.277l-9.408-9.17z"/></g></svg></div>
+                    <div class="item-info">
+                      <h4 class="title uppercase">Fastest kill in the league</h4>
+                      <p class="des acid-green-color uppercase" style="margin-bottom: 3px;">killed an opponent in 0.23sec</p>
+                      <p class="des uppercase">August 28th, 2015</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="player-info-detail flex flex-wrap">
+                  <div class="info-item">
+                    <p class="des uppercase">country</p>
+                    <h4 class="title uppercase">united states</h4>
+                  </div>
+                  <div class="info-item">
+                    <p class="des uppercase">record</p>
+                    <h4 class="title uppercase">won 8-2</h4>
+                  </div>
+                  <div class="info-item">
+                    <p class="des uppercase">prize</p>
+                    <h4 class="title uppercase">USD 50.2K</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="player-carousel-item">
+                <h3 class="name uppercase">Necromanceres</h3>
+                <h1 class="title uppercase">Xenowatch</h1>
+                <div class="match-score-main">
+                  <div class="match-item">
+                    <div class="match-header flex items-center justify-between">
+                      <p class="des">xenowatch west league</p>
+                      <p class="date">thursday, jan 17th</p>
+                    </div>
+                    <div class="match-main">
+                      <div class="match-info flex items-center justify-between">
+                        <div class="match-team left flex items-center">
+                          <div class="team-logo acid-green"><img src="./assets/images/logo-team-5.png" alt=""></div>
+                          <div class="team-info">
+                            <h3 class="title">necromanceres</h3>
+                            <p class="des">united states</p>
+                          </div>
+                        </div>
+                        <div class="match-team center">
+                          <div class="title">4:2
+                          </div>
+                          <div class="des is-live">36:24<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"/></svg>
+                          </div>
+                        </div>
+                        <div class="match-team right flex items-center">
+                          <div class="team-logo violet"><img src="./assets/images/logo-team-1.png" alt=""></div>
+                          <div class="team-info">
+                            <h3 class="title">raging rhinos</h3>
+                            <p class="des">japan</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="player-item flex" style="overflow: hidden;">
+          <div class="player-member-dots">
+            <div class="dots-item active"><img src="./assets/images/person-5.png" alt=""></div>
+            <div class="dots-item"><img src="./assets/images/person-6.png" alt=""></div>
+            <div class="dots-item"><img src="./assets/images/person-1.png" alt=""></div>
+            <div class="dots-item"><img src="./assets/images/person-2.png" alt=""></div>
+            <div class="dots-item"><img src="./assets/images/person-4.png" alt=""></div>
+          </div>
+          <div class="owl-carousel owl-theme player-member-carousel">
+            <div class="item">
+              <div class="player-member-item flex">
+                <div class="player-member-info">
+                  <h4 class="name">James spiegel</h4>
+                  <h2 class="nickname flex items-start justify-between">DaVikinger90
+                    <div class="circle-plus flex items-center justify-center"><a class="icon-plus" href="team-player-1.html"><span></span><span></span></a></div>
+                  </h2>
+                </div>
+                <div class="player-overlay theme-green">
+                  <div class="ncr-page-decor__layer-1"></div>
+                  <div class="ncr-page-decor__layer-2"></div>
+                  <div class="ncr-page-decor__layer-3"></div>
+                  <div class="ncr-page-decor__layer-4"></div>
+                  <div class="ncr-page-decor__layer-5"></div>
+                </div><img class="image-member" src="./assets/images/person-5.png" alt="">
+              </div>
+            </div>
+            <div class="item">
+              <div class="player-member-item flex">
+                <div class="player-member-info">
+                  <h4 class="name">Julie rodgers</h4>
+                  <h2 class="nickname flex items-start justify-between">JULIE_NOIRE
+                    <div class="circle-plus flex items-center justify-center"><a class="icon-plus" href="team-player-2.html"><span></span><span></span></a></div>
+                  </h2>
+                </div>
+                <div class="player-overlay theme-orange">
+                  <div class="ncr-page-decor__layer-1"></div>
+                  <div class="ncr-page-decor__layer-2"></div>
+                  <div class="ncr-page-decor__layer-3"></div>
+                  <div class="ncr-page-decor__layer-4"></div>
+                  <div class="ncr-page-decor__layer-5"></div>
+                </div><img class="image-member" src="./assets/images/person-6.png" alt="">
+              </div>
+            </div>
+            <div class="item">
+              <div class="player-member-item flex">
+                <div class="player-member-info">
+                  <h4 class="name">April Summers</h4>
+                  <h2 class="nickname flex items-start justify-between">G-Huntress
+                    <div class="circle-plus flex items-center justify-center"><a class="icon-plus" href="team-player-3.html"><span></span><span></span></a></div>
+                  </h2>
+                </div>
+                <div class="player-overlay theme-blue">
+                  <div class="ncr-page-decor__layer-1"></div>
+                  <div class="ncr-page-decor__layer-2"></div>
+                  <div class="ncr-page-decor__layer-3"></div>
+                  <div class="ncr-page-decor__layer-4"></div>
+                  <div class="ncr-page-decor__layer-5"></div>
+                </div><img class="image-member" src="./assets/images/person-1.png" alt="">
+              </div>
+            </div>
+            <div class="item">
+              <div class="player-member-item flex">
+                <div class="player-member-info">
+                  <h4 class="name">Mark johnson</h4>
+                  <h2 class="nickname flex items-start justify-between">Crazzzy_80
+                    <div class="circle-plus flex items-center justify-center"><a class="icon-plus" href="team-player-4.html"><span></span><span></span></a></div>
+                  </h2>
+                </div>
+                <div class="player-overlay theme-purple">
+                  <div class="ncr-page-decor__layer-1"></div>
+                  <div class="ncr-page-decor__layer-2"></div>
+                  <div class="ncr-page-decor__layer-3"></div>
+                  <div class="ncr-page-decor__layer-4"></div>
+                  <div class="ncr-page-decor__layer-5"></div>
+                </div><img class="image-member" src="./assets/images/person-2.png" alt="">
+              </div>
+            </div>
+            <div class="item">
+              <div class="player-member-item flex">
+                <div class="player-member-info">
+                  <h4 class="name">SARAH STACY</h4>
+                  <h2 class="nickname flex items-start justify-between">FAYEDBEBOP
+                    <div class="circle-plus flex items-center justify-center"><a class="icon-plus" href="team-player-5.html"><span></span><span></span></a></div>
+                  </h2>
+                </div>
+                <div class="player-overlay theme-red">
+                  <div class="ncr-page-decor__layer-1"></div>
+                  <div class="ncr-page-decor__layer-2"></div>
+                  <div class="ncr-page-decor__layer-3"></div>
+                  <div class="ncr-page-decor__layer-4"></div>
+                  <div class="ncr-page-decor__layer-5"></div>
+                </div><img class="image-member" src="./assets/images/person-4.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/magic-mouse.js"></script><script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
